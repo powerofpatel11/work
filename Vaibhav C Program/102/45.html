@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+p {
+  display: none;
+  background-color: yellow;
+  padding: 20px;
+}
+
+/* div:hover p {
+  display: block;
+  font-family: cursive;
+} */
+
+.fa-brands.fa-instagram{
+    font-size: 50px;
+    animation-name: animate;
+    animation-duration: 5s;
+    animation: animate 1s infinite linear;
+    /* text-shadow: 0 0 15px; */
+    color: brown; 
+}
+#va{
+  color: aqua;
+}
+button {
+    animation-name: animate;
+    animation-duration: 4s;
+    /* width: 100px;  
+    height: 100px; */
+    /* background-color: aqua; */
+}
+
+@keyframes animate{
+
+     25%   {color: deepskyblue}; 
+  50%  {color: lawngreen;}
+  75%  {color: yellow;}
+  100% {color: deeppink;}
+}
+
+button:hover{
+
+    height: 100px;
+    width: 100px;
+  color: brown;
+}
+</style>
+</head>
+<body>
+
+<div>Hover over this div element to show the p element
+  <p>Tada! Here I am!</p>
+</div>
+
+<button>Jaydeep</button>
+
+<i class="fa-brands fa-instagram"></i>
+<i class="fa-solid fa-house-chimney" id="va"></i>
+
+</body>
+</html>
+
+

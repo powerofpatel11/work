@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+
+    function *vaibhav(){
+        // console.log("frist message ");
+        // yield "yield no 1";
+        // console.log("second message ");
+        // yield "yield no 2";
+        // yield "yield no 3";
+
+    //     let nextnum=300;
+    //     while(true){
+    //         yield(nextnum++);
+    //     }
+    // }
+    // let a=vaibhav();
+    // console.log(a.next().value);
+ // (a.next());
+    // console.log(a.next().value);
+    // for(let value of a){
+    //     if(value>310) break;{
+    //         console.log(value);
+            
+    //     }
+
+   let yArray=[yield,yield,yield];
+   console.log(`Result : ${yArray[2]}`);
+
+
+    }
+    let a=vaibhav();
+    a.next();
+    a.next("php");
+    a.next("java");
+    a.next("dotnot");
+    a.next("python");
+
+
+
+   </script> 
+</body> 
+</html>
