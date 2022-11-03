@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .change{
+               background-color: darkmagenta;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" class="vaibhav">
+        <!-- <button class="btn1">vaibhav</button> -->
+        <!-- <button class="two">remove</button>
+        <button class="three">toggle</button> -->
+
+
+        <script>
+            let vaibhav = document.querySelector(".vaibhav");
+            // let two = document.querySelector(".two");
+            // let three = document.querySelector(".three");
+            let body = document.querySelector("body");
+
+          vaibhav.addEventListener("keypress", function () {
+                   body.classList.add("change");
+            });
+
+            // two.addEventListener("click", function () {
+            //        body.classList.remove("change");
+            // });
+
+            // three.addEventListener("click", () => {
+            //        body.classList.toggle("change");
+            // });
+
+// onkeypress
+        
+        </script>
+</body>
+</html>

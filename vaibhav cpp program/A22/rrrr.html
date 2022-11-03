@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .change {
+        background-color: rgb(40, 146, 240);
+      }
+    </style>
+  </head>
+  <body>
+    <button class="btn1">add</button>
+    <button class="btn2">Remove</button>
+    <button class="btn3">Toggle</button>
+    <script>
+      // querySelector will select the element
+      //   addEventListner it will add the event
+
+      let btn1 = document.querySelector(".btn1");
+      let btn2 = document.querySelector(".btn2");
+      let btn3 = document.querySelector(".btn3");
+      let body = document.querySelector("body");
+
+      btn1.addEventListener("click", function () {
+        body.classList.add("change");
+      });
+
+      btn2.addEventListener("mouseover", function () {
+        body.classList.remove("change");
+      });
+
+      btn3.addEventListener("click", () => {
+        body.classList.toggle("change");
+      });
+    </script>
+  </body>
+</html>
