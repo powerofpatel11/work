@@ -1,0 +1,40 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action=""  onsubmit="kkkl()">
+    <label for=""> NAME<input type="text" onfocus="ABC(this)" id="vaibhav" onblur=" aav(this)"></label><br><br>
+    <label for=""> CLASS<input type="text" onfocus="ABC(this)" id="vaibhav" onblur=" aav(this)"></label><br><br>
+    <LAbel>
+        COUNTRY
+        <SElect onfocus="ABC(this)" id="vaibhav" onblur=" aav(this)">
+            <option value=""> INDIA</option>
+            <option value=""> NEW YORK</option>
+            <option value=""> JAPAN </option>
+            <option value=""> TOKIYO</option>
+
+        </SElect>
+        </LAbel>
+    <input type="SUBMIT">
+</form>
+    <SCript>
+        function ABC(element){
+           element.style.backgroundColor="red";
+        }
+        function aav(element){
+            element.style.backgroundColor="green";   
+        }
+        function kkkl(){
+            var x=document.getElementById("vaibhav").value
+            alert("you submited by form" + x);
+            // document.write("sdsdusdsaudhasdha");
+        }
+    </SCript>           
+
+</body>
+</html>

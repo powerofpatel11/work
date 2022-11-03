@@ -1,0 +1,146 @@
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: white;
+        }
+        header{
+            width: 100%;
+        }
+        .main{
+            width: 100vw;
+            height: 100vh;
+            background-image: url(https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: rgba(0, 0, 0, 0.464);
+            background-blend-mode: overlay;
+        }
+        .logo h1{
+            font-size: 36px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: orangered;
+        }
+        nav{
+            width: 90%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        ul{
+            
+            display: flex;
+            gap: 30px;
+            font-size: 20px;
+            letter-spacing: 1.2px;
+            list-style: none;
+        }
+        .search{
+            margin-top: 10px;
+            display: flex;
+            border: 2px solid orangered;
+            border-radius: 6px;
+        }
+        .search input{
+            border: none;
+            padding: 8px 14px;
+            background-color: transparent;
+        }
+        .btn1{
+            border: none;
+            padding: 5px 14px;
+            color: white;
+            font-size: 14px;
+            letter-spacing: 1px;
+            background-color: rgb(255, 25, 0);
+        }
+        .desp{
+            width: 90%;
+            margin: 0 auto;
+            display: flex;
+        }
+        .left{
+            width: 65%;
+            height: calc(100vh - 58px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 30px;
+        }
+        .left h1{
+            width: 60%;
+            font-size: 48px;
+        }
+        span{
+            color: rgb(255, 64, 0);
+            font-size: 58px;
+        }
+        .left p{
+            width: 85%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            letter-spacing: 1px;
+        }
+        .btn2{
+            padding: 10px 38px;
+            background-color: rgb(255, 64, 0);
+            font-size: 20px;
+            border: none;
+            border-radius: 10px;
+            text-transform: uppercase;
+    
+        }
+        .right{
+            width: 35%;
+        }
+        .btn3{
+            padding: 5px 34px;
+            font-size: 24px;
+            letter-spacing: 1.4px;
+            color: orangered;
+            font-weight: 700;
+            border-radius: 10px;
+            border: none;
+        }
+        .box input{
+            width: 100%;
+            border: none;
+            border-bottom: 2px solid orangered;
+            background-color: transparent;
+            padding: 7px 0;
+        }
+        .btn4{
+            width: 100%;
+            padding: 8px 24px;
+            background-color: orangered;
+            font-size: 16px;
+            letter-spacing: 1px;
+            border: none;
+            border-radius: 10px;
+        }
+        .signup{
+            font-size: 16px;
+            color: rgb(255, 34, 0);
+        }
+        .account{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .box{
+            border-radius: 10px;
+            padding: 30px 40px;
+            margin-top: 120px;
+            margin-left: 80px;
+            width: 70%;
+            height: 70%;
+            background-color: rgba(0, 0, 0, 0.861);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+    

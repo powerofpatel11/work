@@ -1,0 +1,2030 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        *:focus {
+            outline: none;
+        }
+
+        body {
+            
+            background: #fafafa;
+    
+            font-family: 'roboto', sans-serif;
+        }
+
+        ul {
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+        }
+
+        
+        .icon img {
+            height: 38px;
+            width: 40px;
+            border-radius: 100% ;
+        }
+
+
+        .main {
+            
+            width: 100%;
+            height: 50px;
+            background: #fff;
+            border-bottom: 1px solid #dfdfdf;
+
+        }
+
+
+        
+        h1 {
+            margin-right: 100px;
+            margin-top: 0;
+            font-size: 35px;
+            font-family: 'Satisfy', cursive;
+            
+        }
+
+        .ll {
+            margin-right: 100px;
+            display: flex;
+            height: 35px;
+            font-size: 18px;
+            background-color: #dfdfdf;
+            border-radius: 10px;
+            margin-top: 8px;
+            justify-items: center;
+            color: rgba(0, 0, 0, 0.5);
+            
+
+        }
+
+        .kk {
+            margin-right: 5px;
+            display: flex;
+            font-size: 30px;
+            margin-top: 8px;
+            gap: 25px;
+            padding-right: 150px;
+        }
+
+        input {
+            height: 30px;
+            background-color: #dfdfdf;
+            border: none;
+            font-size: 18px;
+            padding-top: 8px;
+            width: 270px;
+            letter-spacing: 1.2px;
+            border-radius: 10px;
+            margin-left: 8px;
+        }
+
+        #va {
+            margin-top: 6px;
+            margin-left: 20px;
+        }
+
+        .main2 {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+            padding: 40px 0px;
+
+        }
+
+        .stroll {
+            width: 70%;
+            max-width: 1000px;
+            display: grid;
+            grid-template-columns: 60% 40%;
+            grid-gap: 30px;
+        }
+
+        .left {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .status {
+            width: 100%;
+            height: 120px;
+            background: #fff;
+            border: 1px solid #dfdfdf;
+            border-radius: 2px;
+            padding-right: 0;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+             overflow-x: auto;  
+        }
+
+        .status::-webkit-scrollbar {
+            display: none;
+        }
+
+        .card {
+            flex: 0 0 auto;
+            width: 80px;
+            max-width: 80px;
+            display: flex;
+
+            flex-direction: column;
+            align-items: center;
+            margin-right: 20px;
+        }
+
+        .pic {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            overflow: hidden;
+            padding: 3px;
+            background: linear-gradient(45deg, rgb(255, 230, 0), rgb(255, 0, 128) 80%);
+        }
+
+        .pic img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 2px solid #fff;
+        }
+
+        .name {
+            width: 100%;
+            overflow: hidden;
+            text-align: center;
+            font-size: 10px;
+            font-weight: 700;
+            margin-top: 6px;
+            color: rgba(0, 0, 0, .5);
+        }
+
+        .post {
+            width: 100%;
+            height: auto;
+            border: 1px solid #dfdfdf;
+            background: #fff;
+            margin-top: 40px;
+
+
+
+        }
+
+        .info {
+            width: 100%;
+            height: 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+
+        }
+
+        .info .username {
+            width: auto;
+            font-weight: bold;
+            color: #000;
+            font-size: 14px;
+            margin-left: 10px;
+        }
+
+        .info .option {
+            height: 7px;
+            cursor: pointer;
+
+        }
+
+        .info .user {
+            display: flex;
+            align-items: center;
+
+        }
+
+        .info .pic {
+            height: 45px;
+            width: 45px;
+            padding: 0;
+            background: none;
+        }
+
+        .post_image {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+
+        .postcontent {
+            width: 100%;
+            padding: 20px;
+            
+        }
+
+        .likes {
+            font-weight: bold;
+        }
+
+        .description {
+            margin: 10px 0;
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        .description span {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .posttime {
+            color: rgba(0, 0, 0, .7);
+            font-size: 14px;
+
+        }
+
+        .commentstutus {
+            width: 100%;
+            height: 50px;
+            border-radius: 1px solid #dfdfdf;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .commentstutus .icon {
+            height: 30px;
+            width: 30px;
+            margin-left: 14px;
+            margin-bottom: -8px;
+            background-color: none;
+
+        }
+
+        .commentbox {
+            width: 80%;
+            height: 50px;
+            border: none;
+            background-color: white;
+            outline: none;
+            font-size: 14px;
+        }
+
+        .commentbtn  {
+            width: 70px;
+            height: 100%;
+            background: none;
+            border: none;
+            outline: none;
+            text-transform: capitalize;
+            font-size: 16px;
+            color: rgb(0, 162, 255);
+            opacity: 0.5;
+        }
+
+        .reationstatus {
+            width: 100%;
+            height: 50px;
+            display: flex;
+            margin-top: -20px;
+            font-size: 25px;
+            gap: 30px;
+            align-items: center;
+
+        }
+        .Symbol{
+    display: flex;
+}
+.Symbol span{
+
+    font-size: 25px;
+}
+.rightcol{
+    padding: 20px;
+
+}
+.profilecard2{
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    
+
+
+}
+.profilecard2 .pic{
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+.profilecard2:first-child .pic{
+    width: 66px;
+    height: 66px;
+}
+
+.profilecard2 .pic img{
+    border: none;
+}
+.profilecard2 .username{
+    font-weight: 600;
+    font-size: 14px;
+    color: #000;
+}
+.subtext{
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 5px;
+    margin-right: 80px;
+}
+.actionbtn{
+    
+    width: 70px;
+            height: 100%;
+            background: none;
+            border: none;
+            outline: none;
+            
+            text-transform: capitalize;
+            font-size: 18px;
+            color: rgb(0, 162, 255);
+            font-size: 13px;
+            opacity: 1.5;
+            cursor: pointer;
+            font-weight: 800;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+
+
+
+}
+.profilecard2 .actionbtn {
+    margin-right: -380px;
+}
+
+.suggestiontext{
+    font-size: 14px;
+ font-weight: 800;
+ margin: 12px ;
+ margin-right: 50px;
+    color: rgba(0, 0, 0, 0.5);
+    
+}
+.mgh{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+        #seeall{
+            margin-right: 12px;
+            cursor: pointer;
+        
+        }
+        #switch{
+            margin-left: -35px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <nav>
+            
+            <ul>
+
+                <li>
+                    <h1><i> Instagram</i></h1>
+                </li>
+                <div class="ll">
+                    <li id="va"><i class="fa-solid fa-magnifying-glass"></i></li>
+                    <li><input type="text" placeholder="Search"></li>
+                </div>
+                <div class="kk">
+                    <li><i class="fa-solid fa-house"></i></li>
+                    <li><i class="fa-brands fa-facebook-messenger"></i></li>
+                    <li><i class="fa-solid fa-circle-plus"></i></li>
+                    <li><i class="fa-solid fa-compass"></i></li>
+                    <li> <i class="fa-solid fa-heart"></i> </li>
+
+                    <div class="icon"><img src="https://i.pinimg.com/736x/c1/5f/b8/c15fb8434a8f3c848db6231cb477c185.jpg" alt=""></div>
+                </div>
+            </ul>
+        </nav>
+
+        <section class="main2">
+            <div class="stroll">
+
+                <div class="left">
+                    <div class="status">
+                        <div class="card">
+                            <div class="pic"><img
+                                    src="https://i.pinimg.com/736x/c1/5f/b8/c15fb8434a8f3c848db6231cb477c185.jpg"
+                                    alt="">
+                            </div>
+                            <p class="name">ll_misha_ll</p>
+                        </div>
+
+                        <div class="card">
+                            <div class="pic"><img
+                                    src="https://funkylife.in/wp-content/uploads/2022/04/Instagram-dp-292-1.jpg" alt="">
+                            </div>
+                            <p class="name">_niva_ptel_</p>
+                        </div>
+                        <div class="card">
+                            <div class="pic"><img
+                                    src="https://i.pinimg.com/736x/af/a5/0f/afa50f0316595dfe74ab0b1acb3db37a.jpg"
+                                    alt="">
+                            </div>
+                            <p class="name">ll_king_ll</p>
+                        </div>
+
+                        <div class="card">
+                            <div class="pic"><img
+                                    src="https://i.pinimg.com/564x/da/0e/c2/da0ec299f021bf0d87806b8240e9544a.jpg"
+                                    alt="">
+                            </div>
+                            <p class="name">power_of_patel</p>
+                        </div>
+
+                        <div class="card">
+                            <div class="pic"><img src="https://wallpapercave.com/wp/wp10178863.jpg" alt="">
+                            </div>
+                            <p class="name">_sad_life_11</p>
+                        </div>
+
+                        <div class="card">
+                            <div class="pic"><img
+                                    src="https://i.pinimg.com/736x/36/88/5d/36885d8a573e44d7a2376c96ec999cf4.jpg"
+                                    alt="">
+                            </div>
+                            <p class="name">prexa__12</p>
+                        </div>
+
+                        <div class="card">
+                            <div class="pic"><img
+                                    src="https://dp.profilepics.in/dp/2022/teen-girls-dp-for-instagram/instagram-dp-for-girls-23.jpg"
+                                    alt="">
+                            </div>
+                            <p class="name">__jenni__11</p>
+                        </div>
+
+                        <div class="card">
+                            <div class="pic"><img
+                                    src="https://www.whatsappimages.in/wp-content/uploads/2021/12/free-boy-Latest-Best-Dp-Profile-Images-For-Instagram-hd-download.gif"
+                                    alt="">
+                            </div>
+                            <p class="name">ll_nick_ll</p>
+                        </div>
+
+                        <div class="card">
+                            <div class="pic"><img
+                                    src="https://www.teahub.io/photos/full/33-335429_man-in-red-vest-holding-phone-wearing-sunglasses.jpg"
+                                    alt="">
+                            </div>
+                            <p class="name">_van__sh_25</p>
+                        </div>
+
+                        <div class="card">
+                            <div class="pic"><img
+                                    src="https://blogger.googleusercontent.com/img/a/AVvXsEg22Yb6cyzolaOZx_5dalmhrZbhj7MUhKQXb7SYliaDF4uu0BM9-i0Wwxewvww8wgBqmThfeutd58HY1OIBu9P74C9sGx8kWOYY-Zn-bvHNztURErLhf0r6V-JUj1r002jCjvQOfAZhuMjWJPDjOTCm92ik2gIkeBqQd__7z4vOSdHGDAOCMYfIjeNk=s16000"
+                                    alt="">
+                            </div>
+                            <p class="name">queen_of_surat_11</p>
+                        </div>
+
+
+                    </div>
+                    <div class="post">
+
+                        <div class="info">
+                            <div class="user">
+                                <div class="pic"><img
+                                        src="https://i.pinimg.com/736x/e4/b6/ba/e4b6baa5158a1cdc143d23be0c17a02e.jpg"
+                                        alt=""></div>
+                                <p class="username">ll_misha_ll</p>
+                            </div>
+                            <img src="dots.jpg" class="option" alt="">
+                        </div>
+                        <img src="https://i.pinimg.com/736x/96/eb/46/96eb4692ddb52fb4aa91432353cb9ba9.jpg"
+                            class="post_image" alt="">
+                        <div class="postcontent">
+                            <div class="Symbol">
+                            <div class="reationstatus">
+                                <i class="fa-solid fa-heart" class="icons"></i>
+                                <i class="fa-solid fa-comment" class="icons"></i>
+                                <i class="fa-solid fa-paper-plane" class="icons"></i>
+                                
+                            </div>
+                            <span>
+                                <i class="fa-solid fa-bookmark" class="icons"></i>
+                            </span>
+                        </div>
+                            <p class="likes">2530 likes</p>
+                            <p class="description"> <span>ll_Misha_ll</span>Lorem ipsum dolor, sit amet consectetur
+                                adipisicing elit. Quia repudiandae voluptatum </p>
+                            <p class="posttime">3 minutes ago</p>
+                        </div>
+                        <div class="commentstutus">
+                            <img src="http://t1.gstatic.com/images?q=tbn:ANd9GcQf6oyxe9btIGZMXxsIj34JtNNkIWOBTvD7YoQY3ueR-DV8qvQR"
+                                class="icon" alt="">
+                            <input type="text" class="commentbox" placeholder="Add a comment">
+                            <button class="commentbtn">Post</button>
+                        </div>
+                    </div>
+
+
+
+                    <div class="post">
+
+                        <div class="info">
+                            <div class="user">
+                                <div class="pic"><img
+                                        src="https://i2.wp.com/allovershayari.com/wp-content/uploads/2021/09/Sexy-Quotes-for-Boys-AOS.jpg?resize=487%2C600&ssl=1"
+                                        alt=""></div>
+                                <p class="username">__Rahul_ll</p>
+                            </div>
+                            <img src="dots.jpg" class="option" alt="">
+                        </div>
+                        <img src="https://i2.wp.com/allovershayari.com/wp-content/uploads/2021/09/Sexy-Quotes-for-Boys-AOS.jpg?resize=487%2C600&ssl=1"
+                            class="post_image" alt="">
+                        <div class="postcontent">
+                            <div class="Symbol">
+                            <div class="reationstatus">
+                                <i class="fa-solid fa-heart" class="icons"></i>
+                                <i class="fa-solid fa-comment" class="icons"></i>
+                                <i class="fa-solid fa-paper-plane" class="icons"></i>
+                                
+                            </div>
+                            <span>
+                                <i class="fa-solid fa-bookmark" class="icons"></i>
+                            </span>
+                        </div>
+                            <p class="likes">2530 likes</p>
+                            <p class="description"> <span>__Rahul_ll</span>Lorem ipsum dolor, sit amet consectetur
+                                adipisicing elit. Quia repudiandae voluptatum </p>
+                            <p class="posttime">3 minutes ago</p>
+                        </div>
+                        <div class="commentstutus">
+                            <img src="http://t1.gstatic.com/images?q=tbn:ANd9GcQf6oyxe9btIGZMXxsIj34JtNNkIWOBTvD7YoQY3ueR-DV8qvQR"
+                                class="icon" alt="">
+                            <input type="text" class="commentbox" placeholder="Add a comment">
+                            <button class="commentbtn">Post</button>
+                        </div>
+                    </div>
+
+
+                    
+                    <div class="post">
+
+                        <div class="info">
+                            <div class="user">
+                                <div class="pic"><img
+                                        src="https://i.pinimg.com/originals/58/9b/95/589b95a6d31653255aac5fc29e97aa70.jpg"
+                                        alt=""></div>
+                                <p class="username">_power_of_ptel11</p>
+                            </div>
+                            <img src="dots.jpg" class="option" alt="">
+                        </div>
+                        <img src="https://i.pinimg.com/originals/58/9b/95/589b95a6d31653255aac5fc29e97aa70.jpg"
+                            class="post_image" alt="">
+                        <div class="postcontent">
+                            <div class="Symbol">
+                            <div class="reationstatus">
+                                <i class="fa-solid fa-heart" class="icons"></i>
+                                <i class="fa-solid fa-comment" class="icons"></i>
+                                <i class="fa-solid fa-paper-plane" class="icons"></i>
+                                
+                            </div>
+                            <span>
+                                <i class="fa-solid fa-bookmark" class="icons"></i>
+                            </span>
+                        </div>
+                            <p class="likes">2530 likes</p>
+                            <p class="description"> <span>_power_of_ptel11</span>Lorem ipsum dolor, sit amet consectetur
+                                adipisicing elit. Quia repudiandae voluptatum </p>
+                            <p class="posttime">3 minutes ago</p>
+                        </div>
+                        <div class="commentstutus">
+                            <img src="http://t1.gstatic.com/images?q=tbn:ANd9GcQf6oyxe9btIGZMXxsIj34JtNNkIWOBTvD7YoQY3ueR-DV8qvQR"
+                                class="icon" alt="">
+                            <input type="text" class="commentbox" placeholder="Add a comment">
+                            <button class="commentbtn">Post</button>
+                        </div>
+                    </div>
+
+                    
+                    <div class="post">
+
+                        <div class="info">
+                            <div class="user">
+                                <div class="pic"><img
+                                        src="https://i.pinimg.com/736x/5c/58/e4/5c58e45cc98d2fd0e79b2b97e640bab3.jpg"
+                                        alt=""></div>
+                                <p class="username">ll_Khushali_ll</p>
+                            </div>
+                            <img src="dots.jpg" class="option" alt="">
+                        </div>
+                        <img src="https://i.pinimg.com/736x/5c/58/e4/5c58e45cc98d2fd0e79b2b97e640bab3.jpg"
+                            class="post_image" alt="">
+                        <div class="postcontent">
+                            <div class="Symbol">
+                            <div class="reationstatus">
+                                <i class="fa-solid fa-heart" class="icons"></i>
+                                <i class="fa-solid fa-comment" class="icons"></i>
+                                <i class="fa-solid fa-paper-plane" class="icons"></i>
+                                
+                            </div>
+                            <span>
+                                <i class="fa-solid fa-bookmark" class="icons"></i>
+                            </span>
+                        </div>
+                            <p class="likes">2530 likes</p>
+                            <p class="description"> <span>ll_Khushali_ll</span>Lorem ipsum dolor, sit amet consectetur
+                                adipisicing elit. Quia repudiandae voluptatum </p>
+                            <p class="posttime">3 minutes ago</p>
+                        </div>
+                        <div class="commentstutus">
+                            <img src="http://t1.gstatic.com/images?q=tbn:ANd9GcQf6oyxe9btIGZMXxsIj34JtNNkIWOBTvD7YoQY3ueR-DV8qvQR"
+                                class="icon" alt="">
+                            <input type="text" class="commentbox" placeholder="Add a comment">
+                            <button class="commentbtn">Post</button>
+                        </div>
+                    </div>
+                    
+                    <div class="post">
+
+                        <div class="info">
+                            <div class="user">
+                                <div class="pic"><img
+                                        src="https://i.pinimg.com/736x/5c/58/e4/5c58e45cc98d2fd0e79b2b97e640bab3.jpg"
+                                        alt=""></div>
+                                <p class="username">ll_Khushali_ll</p>
+                            </div>
+                            <img src="dots.jpg" class="option" alt="">
+                        </div>
+                        <img src="https://i.pinimg.com/736x/5c/58/e4/5c58e45cc98d2fd0e79b2b97e640bab3.jpg"
+                            class="post_image" alt="">
+                        <div class="postcontent">
+                            <div class="Symbol">
+                            <div class="reationstatus">
+                                <i class="fa-solid fa-heart" class="icons"></i>
+                                <i class="fa-solid fa-comment" class="icons"></i>
+                                <i class="fa-solid fa-paper-plane" class="icons"></i>
+                                
+                            </div>
+                            <span>
+                                <i class="fa-solid fa-bookmark" class="icons"></i>
+                            </span>
+                        </div>
+                            <p class="likes">2530 likes</p>
+                            <p class="description"> <span>ll_Khushali_ll</span>Lorem ipsum dolor, sit amet consectetur
+                                adipisicing elit. Quia repudiandae voluptatum </p>
+                            <p class="posttime">3 minutes ago</p>
+                        </div>
+                        <div class="commentstutus">
+                            <img src="http://t1.gstatic.com/images?q=tbn:ANd9GcQf6oyxe9btIGZMXxsIj34JtNNkIWOBTvD7YoQY3ueR-DV8qvQR"
+                                class="icon" alt="">
+                            <input type="text" class="commentbox" placeholder="Add a comment">
+                            <button class="commentbtn">Post</button>
+                        </div>
+                    </div>
+                    
+                    <div class="post">
+
+                        <div class="info">
+                            <div class="user">
+                                <div class="pic"><img
+                                        src="https://i.pinimg.com/736x/5c/58/e4/5c58e45cc98d2fd0e79b2b97e640bab3.jpg"
+                                        alt=""></div>
+                                <p class="username">ll_Khushali_ll</p>
+                            </div>
+                            <img src="dots.jpg" class="option" alt="">
+                        </div>
+                        <img src="https://i.pinimg.com/736x/5c/58/e4/5c58e45cc98d2fd0e79b2b97e640bab3.jpg"
+                            class="post_image" alt="">
+                        <div class="postcontent">
+                            <div class="Symbol">
+                            <div class="reationstatus">
+                                <i class="fa-solid fa-heart" class="icons"></i>
+                                <i class="fa-solid fa-comment" class="icons"></i>
+                                <i class="fa-solid fa-paper-plane" class="icons"></i>
+                                
+                            </div>
+                            <span>
+                                <i class="fa-solid fa-bookmark" class="icons"></i>
+                            </span>
+                        </div>
+                            <p class="likes">2530 likes</p>
+                            <p class="description"> <span>ll_Khushali_ll</span>Lorem ipsum dolor, sit amet consectetur
+                                adipisicing elit. Quia repudiandae voluptatum </p>
+                            <p class="posttime">3 minutes ago</p>
+                        </div>
+                        <div class="commentstutus">
+                            <img src="http://t1.gstatic.com/images?q=tbn:ANd9GcQf6oyxe9btIGZMXxsIj34JtNNkIWOBTvD7YoQY3ueR-DV8qvQR"
+                                class="icon" alt="">
+                            <input type="text" class="commentbox" placeholder="Add a comment">
+                            <button class="commentbtn">Post</button>
+                        </div>
+                    </div>
+                    
+                    <div class="post">
+
+                        <div class="info">
+                            <div class="user">
+                                <div class="pic"><img
+                                        src="https://i.pinimg.com/736x/5c/58/e4/5c58e45cc98d2fd0e79b2b97e640bab3.jpg"
+                                        alt=""></div>
+                                <p class="username">ll_Khushali_ll</p>
+                            </div>
+                            <img src="dots.jpg" class="option" alt="">
+                        </div>
+                        <img src="https://i.pinimg.com/736x/5c/58/e4/5c58e45cc98d2fd0e79b2b97e640bab3.jpg"
+                            class="post_image" alt="">
+                        <div class="postcontent">
+                            <div class="Symbol">
+                            <div class="reationstatus">
+                                <i class="fa-solid fa-heart" class="icons"></i>
+                                <i class="fa-solid fa-comment" class="icons"></i>
+                                <i class="fa-solid fa-paper-plane" class="icons"></i>
+                                
+                            </div>
+                            <span>
+                                <i class="fa-solid fa-bookmark" class="icons"></i>
+                            </span>
+                        </div>
+                            <p class="likes">2530 likes</p>
+                            <p class="description"> <span>ll_Khushali_ll</span>Lorem ipsum dolor, sit amet consectetur
+                                adipisicing elit. Quia repudiandae voluptatum </p>
+                            <p class="posttime">3 minutes ago</p>
+                        </div>
+                        <div class="commentstutus">
+                            <img src="http://t1.gstatic.com/images?q=tbn:ANd9GcQf6oyxe9btIGZMXxsIj34JtNNkIWOBTvD7YoQY3ueR-DV8qvQR"
+                                class="icon" alt="">
+                            <input type="text" class="commentbox" placeholder="Add a comment">
+                            <button class="commentbtn">Post</button>
+                        </div>
+                    </div>
+                    
+                    <div class="post">
+
+                        <div class="info">
+                            <div class="user">
+                                <div class="pic"><img
+                                        src="https://i.pinimg.com/736x/5c/58/e4/5c58e45cc98d2fd0e79b2b97e640bab3.jpg"
+                                        alt=""></div>
+                                <p class="username">ll_Khushali_ll</p>
+                            </div>
+                            <img src="dots.jpg" class="option" alt="">
+                        </div>
+                        <img src="https://i.pinimg.com/736x/5c/58/e4/5c58e45cc98d2fd0e79b2b97e640bab3.jpg"
+                            class="post_image" alt="">
+                        <div class="postcontent">
+                            <div class="Symbol">
+                            <div class="reationstatus">
+                                <i class="fa-solid fa-heart" class="icons"></i>
+                                <i class="fa-solid fa-comment" class="icons"></i>
+                                <i class="fa-solid fa-paper-plane" class="icons"></i>
+                                
+                            </div>
+                            <span>
+                                <i class="fa-solid fa-bookmark" class="icons"></i>
+                            </span>
+                        </div>
+                            <p class="likes">2530 likes</p>
+                            <p class="description"> <span>ll_Khushali_ll</span>Lorem ipsum dolor, sit amet consectetur
+                                adipisicing elit. Quia repudiandae voluptatum </p>
+                            <p class="posttime">3 minutes ago</p>
+                        </div>
+                        <div class="commentstutus">
+                            <img src="http://t1.gstatic.com/images?q=tbn:ANd9GcQf6oyxe9btIGZMXxsIj34JtNNkIWOBTvD7YoQY3ueR-DV8qvQR"
+                                class="icon" alt="">
+                            <input type="text" class="commentbox" placeholder="Add a comment">
+                            <button class="commentbtn">Post</button>
+                        </div>
+                    </div>
+                    
+                    <div class="post">
+
+                        <div class="info">
+                            <div class="user">
+                                <div class="pic"><img
+                                        src="https://i.pinimg.com/736x/5c/58/e4/5c58e45cc98d2fd0e79b2b97e640bab3.jpg"
+                                        alt=""></div>
+                                <p class="username">ll_Khushali_ll</p>
+                            </div>
+                            <img src="dots.jpg" class="option" alt="">
+                        </div>
+                        <img src="https://i.pinimg.com/736x/5c/58/e4/5c58e45cc98d2fd0e79b2b97e640bab3.jpg"
+                            class="post_image" alt="">
+                        <div class="postcontent">
+                            <div class="Symbol">
+                            <div class="reationstatus">
+                                <i class="fa-solid fa-heart" class="icons"></i>
+                                <i class="fa-solid fa-comment" class="icons"></i>
+                                <i class="fa-solid fa-paper-plane" class="icons"></i>
+                                
+                            </div>
+                            <span>
+                                <i class="fa-solid fa-bookmark" class="icons"></i>
+                            </span>
+                        </div>
+                            <p class="likes">2530 likes</p>
+                            <p class="description"> <span>ll_Khushali_ll</span>Lorem ipsum dolor, sit amet consectetur
+                                adipisicing elit. Quia repudiandae voluptatum </p>
+                            <p class="posttime">3 minutes ago</p>
+                        </div>
+                        <div class="commentstutus">
+                            <img src="http://t1.gstatic.com/images?q=tbn:ANd9GcQf6oyxe9btIGZMXxsIj34JtNNkIWOBTvD7YoQY3ueR-DV8qvQR"
+                                class="icon" alt="">
+                            <input type="text" class="commentbox" placeholder="Add a comment">
+                            <button class="commentbtn">Post</button>
+                        </div>
+                    </div>
+                    
+                    <div class="post">
+
+                        <div class="info">
+                            <div class="user">
+                                <div class="pic"><img
+                                        src="https://i.pinimg.com/736x/5c/58/e4/5c58e45cc98d2fd0e79b2b97e640bab3.jpg"
+                                        alt=""></div>
+                                <p class="username">ll_Khushali_ll</p>
+                            </div>
+                            <img src="dots.jpg" class="option" alt="">
+                        </div>
+                        <img src="https://i.pinimg.com/736x/5c/58/e4/5c58e45cc98d2fd0e79b2b97e640bab3.jpg"
+                            class="post_image" alt="">
+                        <div class="postcontent">
+                            <div class="Symbol">
+                            <div class="reationstatus">
+                                <i class="fa-solid fa-heart" class="icons"></i>
+                                <i class="fa-solid fa-comment" class="icons"></i>
+                                <i class="fa-solid fa-paper-plane" class="icons"></i>
+                                
+                            </div>
+                            <span>
+                                <i class="fa-solid fa-bookmark" class="icons"></i>
+                            </span>
+                        </div>
+                            <p class="likes">2530 likes</p>
+                            <p class="description"> <span>ll_Khushali_ll</span>Lorem ipsum dolor, sit amet consectetur
+                                adipisicing elit. Quia repudiandae voluptatum </p>
+                            <p class="posttime">3 minutes ago</p>
+                        </div>
+                        <div class="commentstutus">
+                            <img src="http://t1.gstatic.com/images?q=tbn:ANd9GcQf6oyxe9btIGZMXxsIj34JtNNkIWOBTvD7YoQY3ueR-DV8qvQR"
+                                class="icon" alt="">
+                            <input type="text" class="commentbox" placeholder="Add a comment">
+                            <button class="commentbtn">Post</button>
+                        </div>
+                    </div>
+                    
+                    <div class="post">
+
+                        <div class="info">
+                            <div class="user">
+                                <div class="pic"><img
+                                        src="https://i.pinimg.com/736x/5c/58/e4/5c58e45cc98d2fd0e79b2b97e640bab3.jpg"
+                                        alt=""></div>
+                                <p class="username">ll_Khushali_ll</p>
+                            </div>
+                            <img src="dots.jpg" class="option" alt="">
+                        </div>
+                        <img src="https://i.pinimg.com/736x/5c/58/e4/5c58e45cc98d2fd0e79b2b97e640bab3.jpg"
+                            class="post_image" alt="">
+                        <div class="postcontent">
+                            <div class="Symbol">
+                            <div class="reationstatus">
+                                <i class="fa-solid fa-heart" class="icons"></i>
+                                <i class="fa-solid fa-comment" class="icons"></i>
+                                <i class="fa-solid fa-paper-plane" class="icons"></i>
+                                
+                            </div>
+                            <span>
+                                <i class="fa-solid fa-bookmark" class="icons"></i>
+                            </span>
+                        </div>
+                            <p class="likes">2530 likes</p>
+                            <p class="description"> <span>ll_Khushali_ll</span>Lorem ipsum dolor, sit amet consectetur
+                                adipisicing elit. Quia repudiandae voluptatum </p>
+                            <p class="posttime">3 minutes ago</p>
+                        </div>
+                        <div class="commentstutus">
+                            <img src="http://t1.gstatic.com/images?q=tbn:ANd9GcQf6oyxe9btIGZMXxsIj34JtNNkIWOBTvD7YoQY3ueR-DV8qvQR"
+                                class="icon" alt="">
+                            <input type="text" class="commentbox" placeholder="Add a comment">
+                            <button class="commentbtn">Post</button>
+                        </div>
+                    </div>
+                    
+                    <div class="post">
+
+                        <div class="info">
+                            <div class="user">
+                                <div class="pic"><img
+                                        src="https://i.pinimg.com/736x/5c/58/e4/5c58e45cc98d2fd0e79b2b97e640bab3.jpg"
+                                        alt=""></div>
+                                <p class="username">ll_Khushali_ll</p>
+                            </div>
+                            <img src="dots.jpg" class="option" alt="">
+                        </div>
+                        <img src="https://i.pinimg.com/736x/5c/58/e4/5c58e45cc98d2fd0e79b2b97e640bab3.jpg"
+                            class="post_image" alt="">
+                        <div class="postcontent">
+                            <div class="Symbol">
+                            <div class="reationstatus">
+                                <i class="fa-solid fa-heart" class="icons"></i>
+                                <i class="fa-solid fa-comment" class="icons"></i>
+                                <i class="fa-solid fa-paper-plane" class="icons"></i>
+                                
+                            </div>
+                            <span>
+                                <i class="fa-solid fa-bookmark" class="icons"></i>
+                            </span>
+                        </div>
+                            <p class="likes">2530 likes</p>
+                            <p class="description"> <span>ll_Khushali_ll</span>Lorem ipsum dolor, sit amet consectetur
+                                adipisicing elit. Quia repudiandae voluptatum </p>
+                            <p class="posttime">3 minutes ago</p>
+                        </div>
+                        <div class="commentstutus">
+                            <img src="http://t1.gstatic.com/images?q=tbn:ANd9GcQf6oyxe9btIGZMXxsIj34JtNNkIWOBTvD7YoQY3ueR-DV8qvQR"
+                                class="icon" alt="">
+                            <input type="text" class="commentbox" placeholder="Add a comment">
+                            <button class="commentbtn">Post</button>
+                        </div>
+                    </div>
+                    
+                    <div class="post">
+
+                        <div class="info">
+                            <div class="user">
+                                <div class="pic"><img
+                                        src="https://i.pinimg.com/736x/5c/58/e4/5c58e45cc98d2fd0e79b2b97e640bab3.jpg"
+                                        alt=""></div>
+                                <p class="username">ll_Khushali_ll</p>
+                            </div>
+                            <img src="dots.jpg" class="option" alt="">
+                        </div>
+                        <img src="https://i.pinimg.com/736x/5c/58/e4/5c58e45cc98d2fd0e79b2b97e640bab3.jpg"
+                            class="post_image" alt="">
+                        <div class="postcontent">
+                            <div class="Symbol">
+                            <div class="reationstatus">
+                                <i class="fa-solid fa-heart" class="icons"></i>
+                                <i class="fa-solid fa-comment" class="icons"></i>
+                                <i class="fa-solid fa-paper-plane" class="icons"></i>
+                                
+                            </div>
+                            <span>
+                                <i class="fa-solid fa-bookmark" class="icons"></i>
+                            </span>
+                        </div>
+                            <p class="likes">2530 likes</p>
+                            <p class="description"> <span>ll_Khushali_ll</span>Lorem ipsum dolor, sit amet consectetur
+                                adipisicing elit. Quia repudiandae voluptatum </p>
+                            <p class="posttime">3 minutes ago</p>
+                        </div>
+                        <div class="commentstutus">
+                            <img src="http://t1.gstatic.com/images?q=tbn:ANd9GcQf6oyxe9btIGZMXxsIj34JtNNkIWOBTvD7YoQY3ueR-DV8qvQR"
+                                class="icon" alt="">
+                            <input type="text" class="commentbox" placeholder="Add a comment">
+                            <button class="commentbtn">Post</button>
+                        </div>
+                    </div>
+                    
+                    <div class="post">
+
+                        <div class="info">
+                            <div class="user">
+                                <div class="pic"><img
+                                        src="https://i.pinimg.com/736x/5c/58/e4/5c58e45cc98d2fd0e79b2b97e640bab3.jpg"
+                                        alt=""></div>
+                                <p class="username">ll_Khushali_ll</p>
+                            </div>
+                            <img src="dots.jpg" class="option" alt="">
+                        </div>
+                        <img src="https://i.pinimg.com/736x/5c/58/e4/5c58e45cc98d2fd0e79b2b97e640bab3.jpg"
+                            class="post_image" alt="">
+                        <div class="postcontent">
+                            <div class="Symbol">
+                            <div class="reationstatus">
+                                <i class="fa-solid fa-heart" class="icons"></i>
+                                <i class="fa-solid fa-comment" class="icons"></i>
+                                <i class="fa-solid fa-paper-plane" class="icons"></i>
+                                
+                            </div>
+                            <span>
+                                <i class="fa-solid fa-bookmark" class="icons"></i>
+                            </span>
+                        </div>
+                            <p class="likes">2530 likes</p>
+                            <p class="description"> <span>ll_Khushali_ll</span>Lorem ipsum dolor, sit amet consectetur
+                                adipisicing elit. Quia repudiandae voluptatum </p>
+                            <p class="posttime">3 minutes ago</p>
+                        </div>
+                        <div class="commentstutus">
+                            <img src="http://t1.gstatic.com/images?q=tbn:ANd9GcQf6oyxe9btIGZMXxsIj34JtNNkIWOBTvD7YoQY3ueR-DV8qvQR"
+                                class="icon" alt="">
+                            <input type="text" class="commentbox" placeholder="Add a comment">
+                            <button class="commentbtn">Post</button>
+                        </div>
+                    </div>
+                    
+                    <div class="post">
+
+                        <div class="info">
+                            <div class="user">
+                                <div class="pic"><img
+                                        src="https://i.pinimg.com/736x/5c/58/e4/5c58e45cc98d2fd0e79b2b97e640bab3.jpg"
+                                        alt=""></div>
+                                <p class="username">ll_Khushali_ll</p>
+                            </div>
+                            <img src="dots.jpg" class="option" alt="">
+                        </div>
+                        <img src="https://i.pinimg.com/736x/5c/58/e4/5c58e45cc98d2fd0e79b2b97e640bab3.jpg"
+                            class="post_image" alt="">
+                        <div class="postcontent">
+                            <div class="Symbol">
+                            <div class="reationstatus">
+                                <i class="fa-solid fa-heart" class="icons"></i>
+                                <i class="fa-solid fa-comment" class="icons"></i>
+                                <i class="fa-solid fa-paper-plane" class="icons"></i>
+                                
+                            </div>
+                            <span>
+                                <i class="fa-solid fa-bookmark" class="icons"></i>
+                            </span>
+                        </div>
+                            <p class="likes">2530 likes</p>
+                            <p class="description"> <span>ll_Khushali_ll</span>Lorem ipsum dolor, sit amet consectetur
+                                adipisicing elit. Quia repudiandae voluptatum </p>
+                            <p class="posttime">3 minutes ago</p>
+                        </div>
+                        <div class="commentstutus">
+                            <img src="http://t1.gstatic.com/images?q=tbn:ANd9GcQf6oyxe9btIGZMXxsIj34JtNNkIWOBTvD7YoQY3ueR-DV8qvQR"
+                                class="icon" alt="">
+                            <input type="text" class="commentbox" placeholder="Add a comment">
+                            <button class="commentbtn">Post</button>
+                        </div>
+                    </div>
+                    
+                    <div class="post">
+
+                        <div class="info">
+                            <div class="user">
+                                <div class="pic"><img
+                                        src="https://i.pinimg.com/736x/5c/58/e4/5c58e45cc98d2fd0e79b2b97e640bab3.jpg"
+                                        alt=""></div>
+                                <p class="username">ll_Khushali_ll</p>
+                            </div>
+                            <img src="dots.jpg" class="option" alt="">
+                        </div>
+                        <img src="https://i.pinimg.com/736x/5c/58/e4/5c58e45cc98d2fd0e79b2b97e640bab3.jpg"
+                            class="post_image" alt="">
+                        <div class="postcontent">
+                            <div class="Symbol">
+                            <div class="reationstatus">
+                                <i class="fa-solid fa-heart" class="icons"></i>
+                                <i class="fa-solid fa-comment" class="icons"></i>
+                                <i class="fa-solid fa-paper-plane" class="icons"></i>
+                                
+                            </div>
+                            <span>
+                                <i class="fa-solid fa-bookmark" class="icons"></i>
+                            </span>
+                        </div>
+                            <p class="likes">2530 likes</p>
+                            <p class="description"> <span>ll_Khushali_ll</span>Lorem ipsum dolor, sit amet consectetur
+                                adipisicing elit. Quia repudiandae voluptatum </p>
+                            <p class="posttime">3 minutes ago</p>
+                        </div>
+                        <div class="commentstutus">
+                            <img src="http://t1.gstatic.com/images?q=tbn:ANd9GcQf6oyxe9btIGZMXxsIj34JtNNkIWOBTvD7YoQY3ueR-DV8qvQR"
+                                class="icon" alt="">
+                            <input type="text" class="commentbox" placeholder="Add a comment">
+                            <button class="commentbtn">Post</button>
+                        </div>
+                    </div>
+                    
+                    <div class="post">
+
+                        <div class="info">
+                            <div class="user">
+                                <div class="pic"><img
+                                        src="https://i.pinimg.com/736x/5c/58/e4/5c58e45cc98d2fd0e79b2b97e640bab3.jpg"
+                                        alt=""></div>
+                                <p class="username">ll_Khushali_ll</p>
+                            </div>
+                            <img src="dots.jpg" class="option" alt="">
+                        </div>
+                        <img src="https://i.pinimg.com/736x/5c/58/e4/5c58e45cc98d2fd0e79b2b97e640bab3.jpg"
+                            class="post_image" alt="">
+                        <div class="postcontent">
+                            <div class="Symbol">
+                            <div class="reationstatus">
+                                <i class="fa-solid fa-heart" class="icons"></i>
+                                <i class="fa-solid fa-comment" class="icons"></i>
+                                <i class="fa-solid fa-paper-plane" class="icons"></i>
+                                
+                            </div>
+                            <span>
+                                <i class="fa-solid fa-bookmark" class="icons"></i>
+                            </span>
+                        </div>
+                            <p class="likes">2530 likes</p>
+                            <p class="description"> <span>ll_Khushali_ll</span>Lorem ipsum dolor, sit amet consectetur
+                                adipisicing elit. Quia repudiandae voluptatum </p>
+                            <p class="posttime">3 minutes ago</p>
+                        </div>
+                        <div class="commentstutus">
+                            <img src="http://t1.gstatic.com/images?q=tbn:ANd9GcQf6oyxe9btIGZMXxsIj34JtNNkIWOBTvD7YoQY3ueR-DV8qvQR"
+                                class="icon" alt="">
+                            <input type="text" class="commentbox" placeholder="Add a comment">
+                            <button class="commentbtn">Post</button>
+                        </div>
+                    </div>
+                    
+                    <div class="post">
+
+                        <div class="info">
+                            <div class="user">
+                                <div class="pic"><img
+                                        src="https://i.pinimg.com/736x/5c/58/e4/5c58e45cc98d2fd0e79b2b97e640bab3.jpg"
+                                        alt=""></div>
+                                <p class="username">ll_Khushali_ll</p>
+                            </div>
+                            <img src="dots.jpg" class="option" alt="">
+                        </div>
+                        <img src="https://i.pinimg.com/736x/5c/58/e4/5c58e45cc98d2fd0e79b2b97e640bab3.jpg"
+                            class="post_image" alt="">
+                        <div class="postcontent">
+                            <div class="Symbol">
+                            <div class="reationstatus">
+                                <i class="fa-solid fa-heart" class="icons"></i>
+                                <i class="fa-solid fa-comment" class="icons"></i>
+                                <i class="fa-solid fa-paper-plane" class="icons"></i>
+                                
+                            </div>
+                            <span>
+                                <i class="fa-solid fa-bookmark" class="icons"></i>
+                            </span>
+                        </div>
+                            <p class="likes">2530 likes</p>
+                            <p class="description"> <span>ll_Khushali_ll</span>Lorem ipsum dolor, sit amet consectetur
+                                adipisicing elit. Quia repudiandae voluptatum </p>
+                            <p class="posttime">3 minutes ago</p>
+                        </div>
+                        <div class="commentstutus">
+                            <img src="http://t1.gstatic.com/images?q=tbn:ANd9GcQf6oyxe9btIGZMXxsIj34JtNNkIWOBTvD7YoQY3ueR-DV8qvQR"
+                                class="icon" alt="">
+                            <input type="text" class="commentbox" placeholder="Add a comment">
+                            <button class="commentbtn">Post</button>
+                        </div>
+                    </div>
+                    
+                    <div class="post">
+
+                        <div class="info">
+                            <div class="user">
+                                <div class="pic"><img
+                                        src="https://i.pinimg.com/736x/5c/58/e4/5c58e45cc98d2fd0e79b2b97e640bab3.jpg"
+                                        alt=""></div>
+                                <p class="username">ll_Khushali_ll</p>
+                            </div>
+                            <img src="dots.jpg" class="option" alt="">
+                        </div>
+                        <img src="https://i.pinimg.com/736x/5c/58/e4/5c58e45cc98d2fd0e79b2b97e640bab3.jpg"
+                            class="post_image" alt="">
+                        <div class="postcontent">
+                            <div class="Symbol">
+                            <div class="reationstatus">
+                                <i class="fa-solid fa-heart" class="icons"></i>
+                                <i class="fa-solid fa-comment" class="icons"></i>
+                                <i class="fa-solid fa-paper-plane" class="icons"></i>
+                                
+                            </div>
+                            <span>
+                                <i class="fa-solid fa-bookmark" class="icons"></i>
+                            </span>
+                        </div>
+                            <p class="likes">2530 likes</p>
+                            <p class="description"> <span>ll_Khushali_ll</span>Lorem ipsum dolor, sit amet consectetur
+                                adipisicing elit. Quia repudiandae voluptatum </p>
+                            <p class="posttime">3 minutes ago</p>
+                        </div>
+                        <div class="commentstutus">
+                            <img src="http://t1.gstatic.com/images?q=tbn:ANd9GcQf6oyxe9btIGZMXxsIj34JtNNkIWOBTvD7YoQY3ueR-DV8qvQR"
+                                class="icon" alt="">
+                            <input type="text" class="commentbox" placeholder="Add a comment">
+                            <button class="commentbtn">Post</button>
+                        </div>
+                    </div>
+                    
+                    <div class="post">
+
+                        <div class="info">
+                            <div class="user">
+                                <div class="pic"><img
+                                        src="https://i.pinimg.com/736x/5c/58/e4/5c58e45cc98d2fd0e79b2b97e640bab3.jpg"
+                                        alt=""></div>
+                                <p class="username">ll_Khushali_ll</p>
+                            </div>
+                            <img src="dots.jpg" class="option" alt="">
+                        </div>
+                        <img src="https://i.pinimg.com/736x/5c/58/e4/5c58e45cc98d2fd0e79b2b97e640bab3.jpg"
+                            class="post_image" alt="">
+                        <div class="postcontent">
+                            <div class="Symbol">
+                            <div class="reationstatus">
+                                <i class="fa-solid fa-heart" class="icons"></i>
+                                <i class="fa-solid fa-comment" class="icons"></i>
+                                <i class="fa-solid fa-paper-plane" class="icons"></i>
+                                
+                            </div>
+                            <span>
+                                <i class="fa-solid fa-bookmark" class="icons"></i>
+                            </span>
+                        </div>
+                            <p class="likes">2530 likes</p>
+                            <p class="description"> <span>ll_Khushali_ll</span>Lorem ipsum dolor, sit amet consectetur
+                                adipisicing elit. Quia repudiandae voluptatum </p>
+                            <p class="posttime">3 minutes ago</p>
+                        </div>
+                        <div class="commentstutus">
+                            <img src="http://t1.gstatic.com/images?q=tbn:ANd9GcQf6oyxe9btIGZMXxsIj34JtNNkIWOBTvD7YoQY3ueR-DV8qvQR"
+                                class="icon" alt="">
+                            <input type="text" class="commentbox" placeholder="Add a comment">
+                            <button class="commentbtn">Post</button>
+                        </div>
+                    </div>
+                    
+                    <div class="post">
+
+                        <div class="info">
+                            <div class="user">
+                                <div class="pic"><img
+                                        src="https://i.pinimg.com/736x/5c/58/e4/5c58e45cc98d2fd0e79b2b97e640bab3.jpg"
+                                        alt=""></div>
+                                <p class="username">ll_Khushali_ll</p>
+                            </div>
+                            <img src="dots.jpg" class="option" alt="">
+                        </div>
+                        <img src="https://i.pinimg.com/736x/5c/58/e4/5c58e45cc98d2fd0e79b2b97e640bab3.jpg"
+                            class="post_image" alt="">
+                        <div class="postcontent">
+                            <div class="Symbol">
+                            <div class="reationstatus">
+                                <i class="fa-solid fa-heart" class="icons"></i>
+                                <i class="fa-solid fa-comment" class="icons"></i>
+                                <i class="fa-solid fa-paper-plane" class="icons"></i>
+                                
+                            </div>
+                            <span>
+                                <i class="fa-solid fa-bookmark" class="icons"></i>
+                            </span>
+                        </div>
+                            <p class="likes">2530 likes</p>
+                            <p class="description"> <span>ll_Khushali_ll</span>Lorem ipsum dolor, sit amet consectetur
+                                adipisicing elit. Quia repudiandae voluptatum </p>
+                            <p class="posttime">3 minutes ago</p>
+                        </div>
+                        <div class="commentstutus">
+                            <img src="http://t1.gstatic.com/images?q=tbn:ANd9GcQf6oyxe9btIGZMXxsIj34JtNNkIWOBTvD7YoQY3ueR-DV8qvQR"
+                                class="icon" alt="">
+                            <input type="text" class="commentbox" placeholder="Add a comment">
+                            <button class="commentbtn">Post</button>
+                        </div>
+                    </div>
+                    
+                    <div class="post">
+
+                        <div class="info">
+                            <div class="user">
+                                <div class="pic"><img
+                                        src="https://i.pinimg.com/736x/5c/58/e4/5c58e45cc98d2fd0e79b2b97e640bab3.jpg"
+                                        alt=""></div>
+                                <p class="username">ll_Khushali_ll</p>
+                            </div>
+                            <img src="dots.jpg" class="option" alt="">
+                        </div>
+                        <img src="https://i.pinimg.com/736x/5c/58/e4/5c58e45cc98d2fd0e79b2b97e640bab3.jpg"
+                            class="post_image" alt="">
+                        <div class="postcontent">
+                            <div class="Symbol">
+                            <div class="reationstatus">
+                                <i class="fa-solid fa-heart" class="icons"></i>
+                                <i class="fa-solid fa-comment" class="icons"></i>
+                                <i class="fa-solid fa-paper-plane" class="icons"></i>
+                                
+                            </div>
+                            <span>
+                                <i class="fa-solid fa-bookmark" class="icons"></i>
+                            </span>
+                        </div>
+                            <p class="likes">2530 likes</p>
+                            <p class="description"> <span>ll_Khushali_ll</span>Lorem ipsum dolor, sit amet consectetur
+                                adipisicing elit. Quia repudiandae voluptatum </p>
+                            <p class="posttime">3 minutes ago</p>
+                        </div>
+                        <div class="commentstutus">
+                            <img src="http://t1.gstatic.com/images?q=tbn:ANd9GcQf6oyxe9btIGZMXxsIj34JtNNkIWOBTvD7YoQY3ueR-DV8qvQR"
+                                class="icon" alt="">
+                            <input type="text" class="commentbox" placeholder="Add a comment">
+                            <button class="commentbtn">Post</button>
+                        </div>
+                    </div>
+                    
+                    <div class="post">
+
+                        <div class="info">
+                            <div class="user">
+                                <div class="pic"><img
+                                        src="https://i.pinimg.com/736x/5c/58/e4/5c58e45cc98d2fd0e79b2b97e640bab3.jpg"
+                                        alt=""></div>
+                                <p class="username">ll_Khushali_ll</p>
+                            </div>
+                            <img src="dots.jpg" class="option" alt="">
+                        </div>
+                        <img src="https://i.pinimg.com/736x/5c/58/e4/5c58e45cc98d2fd0e79b2b97e640bab3.jpg"
+                            class="post_image" alt="">
+                        <div class="postcontent">
+                            <div class="Symbol">
+                            <div class="reationstatus">
+                                <i class="fa-solid fa-heart" class="icons"></i>
+                                <i class="fa-solid fa-comment" class="icons"></i>
+                                <i class="fa-solid fa-paper-plane" class="icons"></i>
+                                
+                            </div>
+                            <span>
+                                <i class="fa-solid fa-bookmark" class="icons"></i>
+                            </span>
+                        </div>
+                            <p class="likes">2530 likes</p>
+                            <p class="description"> <span>ll_Khushali_ll</span>Lorem ipsum dolor, sit amet consectetur
+                                adipisicing elit. Quia repudiandae voluptatum </p>
+                            <p class="posttime">3 minutes ago</p>
+                        </div>
+                        <div class="commentstutus">
+                            <img src="http://t1.gstatic.com/images?q=tbn:ANd9GcQf6oyxe9btIGZMXxsIj34JtNNkIWOBTvD7YoQY3ueR-DV8qvQR"
+                                class="icon" alt="">
+                            <input type="text" class="commentbox" placeholder="Add a comment">
+                            <button class="commentbtn">Post</button>
+                        </div>
+                    </div>
+                    
+                    <div class="post">
+
+                        <div class="info">
+                            <div class="user">
+                                <div class="pic"><img
+                                        src="https://i.pinimg.com/736x/5c/58/e4/5c58e45cc98d2fd0e79b2b97e640bab3.jpg"
+                                        alt=""></div>
+                                <p class="username">ll_Khushali_ll</p>
+                            </div>
+                            <img src="dots.jpg" class="option" alt="">
+                        </div>
+                        <img src="https://i.pinimg.com/736x/5c/58/e4/5c58e45cc98d2fd0e79b2b97e640bab3.jpg"
+                            class="post_image" alt="">
+                        <div class="postcontent">
+                            <div class="Symbol">
+                            <div class="reationstatus">
+                                <i class="fa-solid fa-heart" class="icons"></i>
+                                <i class="fa-solid fa-comment" class="icons"></i>
+                                <i class="fa-solid fa-paper-plane" class="icons"></i>
+                                
+                            </div>
+                            <span>
+                                <i class="fa-solid fa-bookmark" class="icons"></i>
+                            </span>
+                        </div>
+                            <p class="likes">2530 likes</p>
+                            <p class="description"> <span>ll_Khushali_ll</span>Lorem ipsum dolor, sit amet consectetur
+                                adipisicing elit. Quia repudiandae voluptatum </p>
+                            <p class="posttime">3 minutes ago</p>
+                        </div>
+                        <div class="commentstutus">
+                            <img src="http://t1.gstatic.com/images?q=tbn:ANd9GcQf6oyxe9btIGZMXxsIj34JtNNkIWOBTvD7YoQY3ueR-DV8qvQR"
+                                class="icon" alt="">
+                            <input type="text" class="commentbox" placeholder="Add a comment">
+                            <button class="commentbtn">Post</button>
+                        </div>
+                    </div>
+                    
+                    <div class="post">
+
+                        <div class="info">
+                            <div class="user">
+                                <div class="pic"><img
+                                        src="https://i.pinimg.com/736x/5c/58/e4/5c58e45cc98d2fd0e79b2b97e640bab3.jpg"
+                                        alt=""></div>
+                                <p class="username">ll_Khushali_ll</p>
+                            </div>
+                            <img src="dots.jpg" class="option" alt="">
+                        </div>
+                        <img src="https://i.pinimg.com/736x/5c/58/e4/5c58e45cc98d2fd0e79b2b97e640bab3.jpg"
+                            class="post_image" alt="">
+                        <div class="postcontent">
+                            <div class="Symbol">
+                            <div class="reationstatus">
+                                <i class="fa-solid fa-heart" class="icons"></i>
+                                <i class="fa-solid fa-comment" class="icons"></i>
+                                <i class="fa-solid fa-paper-plane" class="icons"></i>
+                                
+                            </div>
+                            <span>
+                                <i class="fa-solid fa-bookmark" class="icons"></i>
+                            </span>
+                        </div>
+                            <p class="likes">2530 likes</p>
+                            <p class="description"> <span>ll_Khushali_ll</span>Lorem ipsum dolor, sit amet consectetur
+                                adipisicing elit. Quia repudiandae voluptatum </p>
+                            <p class="posttime">3 minutes ago</p>
+                        </div>
+                        <div class="commentstutus">
+                            <img src="http://t1.gstatic.com/images?q=tbn:ANd9GcQf6oyxe9btIGZMXxsIj34JtNNkIWOBTvD7YoQY3ueR-DV8qvQR"
+                                class="icon" alt="">
+                            <input type="text" class="commentbox" placeholder="Add a comment">
+                            <button class="commentbtn">Post</button>
+                        </div>
+                    </div>
+                    
+                    <div class="post">
+
+                        <div class="info">
+                            <div class="user">
+                                <div class="pic"><img
+                                        src="https://i.pinimg.com/736x/5c/58/e4/5c58e45cc98d2fd0e79b2b97e640bab3.jpg"
+                                        alt=""></div>
+                                <p class="username">ll_Khushali_ll</p>
+                            </div>
+                            <img src="dots.jpg" class="option" alt="">
+                        </div>
+                        <img src="https://i.pinimg.com/736x/5c/58/e4/5c58e45cc98d2fd0e79b2b97e640bab3.jpg"
+                            class="post_image" alt="">
+                        <div class="postcontent">
+                            <div class="Symbol">
+                            <div class="reationstatus">
+                                <i class="fa-solid fa-heart" class="icons"></i>
+                                <i class="fa-solid fa-comment" class="icons"></i>
+                                <i class="fa-solid fa-paper-plane" class="icons"></i>
+                                
+                            </div>
+                            <span>
+                                <i class="fa-solid fa-bookmark" class="icons"></i>
+                            </span>
+                        </div>
+                            <p class="likes">2530 likes</p>
+                            <p class="description"> <span>ll_Khushali_ll</span>Lorem ipsum dolor, sit amet consectetur
+                                adipisicing elit. Quia repudiandae voluptatum </p>
+                            <p class="posttime">3 minutes ago</p>
+                        </div>
+                        <div class="commentstutus">
+                            <img src="http://t1.gstatic.com/images?q=tbn:ANd9GcQf6oyxe9btIGZMXxsIj34JtNNkIWOBTvD7YoQY3ueR-DV8qvQR"
+                                class="icon" alt="">
+                            <input type="text" class="commentbox" placeholder="Add a comment">
+                            <button class="commentbtn">Post</button>
+                        </div>
+                    </div>
+                    
+                    <div class="post">
+
+                        <div class="info">
+                            <div class="user">
+                                <div class="pic"><img
+                                        src="https://i.pinimg.com/736x/5c/58/e4/5c58e45cc98d2fd0e79b2b97e640bab3.jpg"
+                                        alt=""></div>
+                                <p class="username">ll_Khushali_ll</p>
+                            </div>
+                            <img src="dots.jpg" class="option" alt="">
+                        </div>
+                        <img src="https://i.pinimg.com/736x/5c/58/e4/5c58e45cc98d2fd0e79b2b97e640bab3.jpg"
+                            class="post_image" alt="">
+                        <div class="postcontent">
+                            <div class="Symbol">
+                            <div class="reationstatus">
+                                <i class="fa-solid fa-heart" class="icons"></i>
+                                <i class="fa-solid fa-comment" class="icons"></i>
+                                <i class="fa-solid fa-paper-plane" class="icons"></i>
+                                
+                            </div>
+                            <span>
+                                <i class="fa-solid fa-bookmark" class="icons"></i>
+                            </span>
+                        </div>
+                            <p class="likes">2530 likes</p>
+                            <p class="description"> <span>ll_Khushali_ll</span>Lorem ipsum dolor, sit amet consectetur
+                                adipisicing elit. Quia repudiandae voluptatum </p>
+                            <p class="posttime">3 minutes ago</p>
+                        </div>
+                        <div class="commentstutus">
+                            <img src="http://t1.gstatic.com/images?q=tbn:ANd9GcQf6oyxe9btIGZMXxsIj34JtNNkIWOBTvD7YoQY3ueR-DV8qvQR"
+                                class="icon" alt="">
+                            <input type="text" class="commentbox" placeholder="Add a comment">
+                            <button class="commentbtn">Post</button>
+                        </div>
+                    </div>
+                    
+                    <div class="post">
+
+                        <div class="info">
+                            <div class="user">
+                                <div class="pic"><img
+                                        src="https://i.pinimg.com/736x/5c/58/e4/5c58e45cc98d2fd0e79b2b97e640bab3.jpg"
+                                        alt=""></div>
+                                <p class="username">ll_Khushali_ll</p>
+                            </div>
+                            <img src="dots.jpg" class="option" alt="">
+                        </div>
+                        <img src="https://i.pinimg.com/736x/5c/58/e4/5c58e45cc98d2fd0e79b2b97e640bab3.jpg"
+                            class="post_image" alt="">
+                        <div class="postcontent">
+                            <div class="Symbol">
+                            <div class="reationstatus">
+                                <i class="fa-solid fa-heart" class="icons"></i>
+                                <i class="fa-solid fa-comment" class="icons"></i>
+                                <i class="fa-solid fa-paper-plane" class="icons"></i>
+                                
+                            </div>
+                            <span>
+                                <i class="fa-solid fa-bookmark" class="icons"></i>
+                            </span>
+                        </div>
+                            <p class="likes">2530 likes</p>
+                            <p class="description"> <span>ll_Khushali_ll</span>Lorem ipsum dolor, sit amet consectetur
+                                adipisicing elit. Quia repudiandae voluptatum </p>
+                            <p class="posttime">3 minutes ago</p>
+                        </div>
+                        <div class="commentstutus">
+                            <img src="http://t1.gstatic.com/images?q=tbn:ANd9GcQf6oyxe9btIGZMXxsIj34JtNNkIWOBTvD7YoQY3ueR-DV8qvQR"
+                                class="icon" alt="">
+                            <input type="text" class="commentbox" placeholder="Add a comment">
+                            <button class="commentbtn">Post</button>
+                        </div>
+                    </div>
+                    
+                    <div class="post">
+
+                        <div class="info">
+                            <div class="user">
+                                <div class="pic"><img
+                                        src="https://i.pinimg.com/736x/5c/58/e4/5c58e45cc98d2fd0e79b2b97e640bab3.jpg"
+                                        alt=""></div>
+                                <p class="username">ll_Khushali_ll</p>
+                            </div>
+                            <img src="dots.jpg" class="option" alt="">
+                        </div>
+                        <img src="https://i.pinimg.com/736x/5c/58/e4/5c58e45cc98d2fd0e79b2b97e640bab3.jpg"
+                            class="post_image" alt="">
+                        <div class="postcontent">
+                            <div class="Symbol">
+                            <div class="reationstatus">
+                                <i class="fa-solid fa-heart" class="icons"></i>
+                                <i class="fa-solid fa-comment" class="icons"></i>
+                                <i class="fa-solid fa-paper-plane" class="icons"></i>
+                                
+                            </div>
+                            <span>
+                                <i class="fa-solid fa-bookmark" class="icons"></i>
+                            </span>
+                        </div>
+                            <p class="likes">2530 likes</p>
+                            <p class="description"> <span>ll_Khushali_ll</span>Lorem ipsum dolor, sit amet consectetur
+                                adipisicing elit. Quia repudiandae voluptatum </p>
+                            <p class="posttime">3 minutes ago</p>
+                        </div>
+                        <div class="commentstutus">
+                            <img src="http://t1.gstatic.com/images?q=tbn:ANd9GcQf6oyxe9btIGZMXxsIj34JtNNkIWOBTvD7YoQY3ueR-DV8qvQR"
+                                class="icon" alt="">
+                            <input type="text" class="commentbox" placeholder="Add a comment">
+                            <button class="commentbtn">Post</button>
+                        </div>
+                    </div>
+                    
+                    <div class="post">
+
+                        <div class="info">
+                            <div class="user">
+                                <div class="pic"><img
+                                        src="https://i.pinimg.com/736x/5c/58/e4/5c58e45cc98d2fd0e79b2b97e640bab3.jpg"
+                                        alt=""></div>
+                                <p class="username">ll_Khushali_ll</p>
+                            </div>
+                            <img src="dots.jpg" class="option" alt="">
+                        </div>
+                        <img src="https://i.pinimg.com/736x/5c/58/e4/5c58e45cc98d2fd0e79b2b97e640bab3.jpg"
+                            class="post_image" alt="">
+                        <div class="postcontent">
+                            <div class="Symbol">
+                            <div class="reationstatus">
+                                <i class="fa-solid fa-heart" class="icons"></i>
+                                <i class="fa-solid fa-comment" class="icons"></i>
+                                <i class="fa-solid fa-paper-plane" class="icons"></i>
+                                
+                            </div>
+                            <span>
+                                <i class="fa-solid fa-bookmark" class="icons"></i>
+                            </span>
+                        </div>
+                            <p class="likes">2530 likes</p>
+                            <p class="description"> <span>ll_Khushali_ll</span>Lorem ipsum dolor, sit amet consectetur
+                                adipisicing elit. Quia repudiandae voluptatum </p>
+                            <p class="posttime">3 minutes ago</p>
+                        </div>
+                        <div class="commentstutus">
+                            <img src="http://t1.gstatic.com/images?q=tbn:ANd9GcQf6oyxe9btIGZMXxsIj34JtNNkIWOBTvD7YoQY3ueR-DV8qvQR"
+                                class="icon" alt="">
+                            <input type="text" class="commentbox" placeholder="Add a comment">
+                            <button class="commentbtn">Post</button>
+                        </div>
+                    </div>
+                    
+                    <div class="post">
+
+                        <div class="info">
+                            <div class="user">
+                                <div class="pic"><img
+                                        src="https://i.pinimg.com/736x/5c/58/e4/5c58e45cc98d2fd0e79b2b97e640bab3.jpg"
+                                        alt=""></div>
+                                <p class="username">ll_Khushali_ll</p>
+                            </div>
+                            <img src="dots.jpg" class="option" alt="">
+                        </div>
+                        <img src="https://i.pinimg.com/736x/5c/58/e4/5c58e45cc98d2fd0e79b2b97e640bab3.jpg"
+                            class="post_image" alt="">
+                        <div class="postcontent">
+                            <div class="Symbol">
+                            <div class="reationstatus">
+                                <i class="fa-solid fa-heart" class="icons"></i>
+                                <i class="fa-solid fa-comment" class="icons"></i>
+                                <i class="fa-solid fa-paper-plane" class="icons"></i>
+                                
+                            </div>
+                            <span>
+                                <i class="fa-solid fa-bookmark" class="icons"></i>
+                            </span>
+                        </div>
+                            <p class="likes">2530 likes</p>
+                            <p class="description"> <span>ll_Khushali_ll</span>Lorem ipsum dolor, sit amet consectetur
+                                adipisicing elit. Quia repudiandae voluptatum </p>
+                            <p class="posttime">3 minutes ago</p>
+                        </div>
+                        <div class="commentstutus">
+                            <img src="http://t1.gstatic.com/images?q=tbn:ANd9GcQf6oyxe9btIGZMXxsIj34JtNNkIWOBTvD7YoQY3ueR-DV8qvQR"
+                                class="icon" alt="">
+                            <input type="text" class="commentbox" placeholder="Add a comment">
+                            <button class="commentbtn">Post</button>
+                        </div>
+                    </div>
+                    
+                    <div class="post">
+
+                        <div class="info">
+                            <div class="user">
+                                <div class="pic"><img
+                                        src="https://i.pinimg.com/736x/5c/58/e4/5c58e45cc98d2fd0e79b2b97e640bab3.jpg"
+                                        alt=""></div>
+                                <p class="username">ll_Khushali_ll</p>
+                            </div>
+                            <img src="dots.jpg" class="option" alt="">
+                        </div>
+                        <img src="https://i.pinimg.com/736x/5c/58/e4/5c58e45cc98d2fd0e79b2b97e640bab3.jpg"
+                            class="post_image" alt="">
+                        <div class="postcontent">
+                            <div class="Symbol">
+                            <div class="reationstatus">
+                                <i class="fa-solid fa-heart" class="icons"></i>
+                                <i class="fa-solid fa-comment" class="icons"></i>
+                                <i class="fa-solid fa-paper-plane" class="icons"></i>
+                                
+                            </div>
+                            <span>
+                                <i class="fa-solid fa-bookmark" class="icons"></i>
+                            </span>
+                        </div>
+                            <p class="likes">2530 likes</p>
+                            <p class="description"> <span>ll_Khushali_ll</span>Lorem ipsum dolor, sit amet consectetur
+                                adipisicing elit. Quia repudiandae voluptatum </p>
+                            <p class="posttime">3 minutes ago</p>
+                        </div>
+                        <div class="commentstutus">
+                            <img src="http://t1.gstatic.com/images?q=tbn:ANd9GcQf6oyxe9btIGZMXxsIj34JtNNkIWOBTvD7YoQY3ueR-DV8qvQR"
+                                class="icon" alt="">
+                            <input type="text" class="commentbox" placeholder="Add a comment">
+                            <button class="commentbtn">Post</button>
+                        </div>
+                    </div>
+                    
+                    <div class="post">
+
+                        <div class="info">
+                            <div class="user">
+                                <div class="pic"><img
+                                        src="https://i.pinimg.com/736x/5c/58/e4/5c58e45cc98d2fd0e79b2b97e640bab3.jpg"
+                                        alt=""></div>
+                                <p class="username">ll_Khushali_ll</p>
+                            </div>
+                            <img src="dots.jpg" class="option" alt="">
+                        </div>
+                        <img src="https://i.pinimg.com/736x/5c/58/e4/5c58e45cc98d2fd0e79b2b97e640bab3.jpg"
+                            class="post_image" alt="">
+                        <div class="postcontent">
+                            <div class="Symbol">
+                            <div class="reationstatus">
+                                <i class="fa-solid fa-heart" class="icons"></i>
+                                <i class="fa-solid fa-comment" class="icons"></i>
+                                <i class="fa-solid fa-paper-plane" class="icons"></i>
+                                
+                            </div>
+                            <span>
+                                <i class="fa-solid fa-bookmark" class="icons"></i>
+                            </span>
+                        </div>
+                            <p class="likes">2530 likes</p>
+                            <p class="description"> <span>ll_Khushali_ll</span>Lorem ipsum dolor, sit amet consectetur
+                                adipisicing elit. Quia repudiandae voluptatum </p>
+                            <p class="posttime">3 minutes ago</p>
+                        </div>
+                        <div class="commentstutus">
+                            <img src="http://t1.gstatic.com/images?q=tbn:ANd9GcQf6oyxe9btIGZMXxsIj34JtNNkIWOBTvD7YoQY3ueR-DV8qvQR"
+                                class="icon" alt="">
+                            <input type="text" class="commentbox" placeholder="Add a comment">
+                            <button class="commentbtn">Post</button>
+                        </div>
+                    </div>
+                    
+                    <div class="post">
+
+                        <div class="info">
+                            <div class="user">
+                                <div class="pic"><img
+                                        src="https://i.pinimg.com/736x/5c/58/e4/5c58e45cc98d2fd0e79b2b97e640bab3.jpg"
+                                        alt=""></div>
+                                <p class="username">ll_Khushali_ll</p>
+                            </div>
+                            <img src="dots.jpg" class="option" alt="">
+                        </div>
+                        <img src="https://i.pinimg.com/736x/5c/58/e4/5c58e45cc98d2fd0e79b2b97e640bab3.jpg"
+                            class="post_image" alt="">
+                        <div class="postcontent">
+                            <div class="Symbol">
+                            <div class="reationstatus">
+                                <i class="fa-solid fa-heart" class="icons"></i>
+                                <i class="fa-solid fa-comment" class="icons"></i>
+                                <i class="fa-solid fa-paper-plane" class="icons"></i>
+                                
+                            </div>
+                            <span>
+                                <i class="fa-solid fa-bookmark" class="icons"></i>
+                            </span>
+                        </div>
+                            <p class="likes">2530 likes</p>
+                            <p class="description"> <span>ll_Khushali_ll</span>Lorem ipsum dolor, sit amet consectetur
+                                adipisicing elit. Quia repudiandae voluptatum </p>
+                            <p class="posttime">3 minutes ago</p>
+                        </div>
+                        <div class="commentstutus">
+                            <img src="http://t1.gstatic.com/images?q=tbn:ANd9GcQf6oyxe9btIGZMXxsIj34JtNNkIWOBTvD7YoQY3ueR-DV8qvQR"
+                                class="icon" alt="">
+                            <input type="text" class="commentbox" placeholder="Add a comment">
+                            <button class="commentbtn">Post</button>
+                        </div>
+                    </div>
+                    
+                    <div class="post">
+
+                        <div class="info">
+                            <div class="user">
+                                <div class="pic"><img
+                                        src="https://i.pinimg.com/736x/5c/58/e4/5c58e45cc98d2fd0e79b2b97e640bab3.jpg"
+                                        alt=""></div>
+                                <p class="username">ll_Khushali_ll</p>
+                            </div>
+                            <img src="dots.jpg" class="option" alt="">
+                        </div>
+                        <img src="https://i.pinimg.com/736x/5c/58/e4/5c58e45cc98d2fd0e79b2b97e640bab3.jpg"
+                            class="post_image" alt="">
+                        <div class="postcontent">
+                            <div class="Symbol">
+                            <div class="reationstatus">
+                                <i class="fa-solid fa-heart" class="icons"></i>
+                                <i class="fa-solid fa-comment" class="icons"></i>
+                                <i class="fa-solid fa-paper-plane" class="icons"></i>
+                                
+                            </div>
+                            <span>
+                                <i class="fa-solid fa-bookmark" class="icons"></i>
+                            </span>
+                        </div>
+                            <p class="likes">2530 likes</p>
+                            <p class="description"> <span>ll_Khushali_ll</span>Lorem ipsum dolor, sit amet consectetur
+                                adipisicing elit. Quia repudiandae voluptatum </p>
+                            <p class="posttime">3 minutes ago</p>
+                        </div>
+                        <div class="commentstutus">
+                            <img src="http://t1.gstatic.com/images?q=tbn:ANd9GcQf6oyxe9btIGZMXxsIj34JtNNkIWOBTvD7YoQY3ueR-DV8qvQR"
+                                class="icon" alt="">
+                            <input type="text" class="commentbox" placeholder="Add a comment">
+                            <button class="commentbtn">Post</button>
+                        </div>
+                    </div>
+                    
+                    <div class="post">
+
+                        <div class="info">
+                            <div class="user">
+                                <div class="pic"><img
+                                        src="https://i.pinimg.com/736x/5c/58/e4/5c58e45cc98d2fd0e79b2b97e640bab3.jpg"
+                                        alt=""></div>
+                                <p class="username">ll_Khushali_ll</p>
+                            </div>
+                            <img src="dots.jpg" class="option" alt="">
+                        </div>
+                        <img src="https://i.pinimg.com/736x/5c/58/e4/5c58e45cc98d2fd0e79b2b97e640bab3.jpg"
+                            class="post_image" alt="">
+                        <div class="postcontent">
+                            <div class="Symbol">
+                            <div class="reationstatus">
+                                <i class="fa-solid fa-heart" class="icons"></i>
+                                <i class="fa-solid fa-comment" class="icons"></i>
+                                <i class="fa-solid fa-paper-plane" class="icons"></i>
+                                
+                            </div>
+                            <span>
+                                <i class="fa-solid fa-bookmark" class="icons"></i>
+                            </span>
+                        </div>
+                            <p class="likes">2530 likes</p>
+                            <p class="description"> <span>ll_Khushali_ll</span>Lorem ipsum dolor, sit amet consectetur
+                                adipisicing elit. Quia repudiandae voluptatum </p>
+                            <p class="posttime">3 minutes ago</p>
+                        </div>
+                        <div class="commentstutus">
+                            <img src="http://t1.gstatic.com/images?q=tbn:ANd9GcQf6oyxe9btIGZMXxsIj34JtNNkIWOBTvD7YoQY3ueR-DV8qvQR"
+                                class="icon" alt="">
+                            <input type="text" class="commentbox" placeholder="Add a comment">
+                            <button class="commentbtn">Post</button>
+                        </div>
+                    </div>
+                    
+                    <div class="post">
+
+                        <div class="info">
+                            <div class="user">
+                                <div class="pic"><img
+                                        src="https://i.pinimg.com/736x/5c/58/e4/5c58e45cc98d2fd0e79b2b97e640bab3.jpg"
+                                        alt=""></div>
+                                <p class="username">ll_Khushali_ll</p>
+                            </div>
+                            <img src="dots.jpg" class="option" alt="">
+                        </div>
+                        <img src="https://i.pinimg.com/736x/5c/58/e4/5c58e45cc98d2fd0e79b2b97e640bab3.jpg"
+                            class="post_image" alt="">
+                        <div class="postcontent">
+                            <div class="Symbol">
+                            <div class="reationstatus">
+                                <i class="fa-solid fa-heart" class="icons"></i>
+                                <i class="fa-solid fa-comment" class="icons"></i>
+                                <i class="fa-solid fa-paper-plane" class="icons"></i>
+                                
+                            </div>
+                            <span>
+                                <i class="fa-solid fa-bookmark" class="icons"></i>
+                            </span>
+                        </div>
+                            <p class="likes">2530 likes</p>
+                            <p class="description"> <span>ll_Khushali_ll</span>Lorem ipsum dolor, sit amet consectetur
+                                adipisicing elit. Quia repudiandae voluptatum </p>
+                            <p class="posttime">3 minutes ago</p>
+                        </div>
+                        <div class="commentstutus">
+                            <img src="http://t1.gstatic.com/images?q=tbn:ANd9GcQf6oyxe9btIGZMXxsIj34JtNNkIWOBTvD7YoQY3ueR-DV8qvQR"
+                                class="icon" alt="">
+                            <input type="text" class="commentbox" placeholder="Add a comment">
+                            <button class="commentbtn">Post</button>
+                        </div>
+                    </div>
+
+                    
+                    <div class="post">
+
+                        <div class="info">
+                            <div class="user">
+                                <div class="pic"><img
+                                        src="https://i.pinimg.com/736x/41/31/aa/4131aa30fbed2527993657432f9a7ebe.jpg"
+                                        alt=""></div>
+                                <p class="username">_dipali_ll</p>
+                            </div>
+                            <img src="dots.jpg" class="option" alt="">
+                        </div>
+                        <img src="https://i.pinimg.com/736x/41/31/aa/4131aa30fbed2527993657432f9a7ebe.jpg"
+                            class="post_image" alt="">
+                        <div class="postcontent">
+                            <div class="Symbol">
+                            <div class="reationstatus">
+                                <i class="fa-solid fa-heart" class="icons"></i>
+                                <i class="fa-solid fa-comment" class="icons"></i>
+                                <i class="fa-solid fa-paper-plane" class="icons"></i>
+                                
+                            </div>
+                            <span>
+                                <i class="fa-solid fa-bookmark" class="icons"></i>
+                            </span>
+                        </div>
+                            <p class="likes">2530 likes</p>
+                            <p class="description"> <span>_dipali_ll</span>Lorem ipsum dolor, sit amet consectetur
+                                adipisicing elit. Quia repudiandae voluptatum </p>
+                            <p class="posttime">3 minutes ago</p>
+                        </div>
+                        <div class="commentstutus">
+                            <img src="http://t1.gstatic.com/images?q=tbn:ANd9GcQf6oyxe9btIGZMXxsIj34JtNNkIWOBTvD7YoQY3ueR-DV8qvQR"
+                                class="icon" alt="">
+                            <input type="text" class="commentbox" placeholder="Add a comment">
+                            <button class="commentbtn">Post</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="rightcol">
+                    <div class="profilecard2">
+                        <div class="pic">
+                            <img src="https://i.pinimg.com/736x/53/06/85/5306855fefecbc09543bf9964dc38a9a.jpg" alt="">
+                        </div>
+                        <div>
+                            <p  class="username" >power_of_patel_11</p>
+                            <p class="subtext" >vaibhav bhanderi</p>
+                        </div>
+                        <button  class="actionbtn" id="switch" >switch</button>
+                    </div  >
+                    <div class="mgh" >
+                    <p class="suggestiontext">suggestions for you</p>
+                    <p id="seeall">See All</p>
+                </div>
+                    <div class="profilecard2">
+                        <div class="pic">
+                            <img src="https://files.oyebesmartest.com/uploads/large/11589196682udz.jpeg" alt="">
+                        </div>
+                        <div>
+                            <p  class="username" >__Riyaz__11</p>
+                            <p class="subtext" >follwer by user</p>
+                        </div>
+                        <button  class="actionbtn"  >follow</button>
+                    </div>
+
+
+                    <div class="profilecard2">
+                        <div class="pic">
+                            <img src="https://img.freepik.com/free-photo/beautiful-girl-stands-near-walll-with-leaves_8353-5377.jpg?w=2000" alt="">
+                        </div>
+                        <div>
+                            <p  class="username" >__jenni__25</p>
+                            <p class="subtext" >follwer by user</p>
+                        </div>
+                        <button  class="actionbtn"  >follow</button>
+                    </div>
+
+                    <div class="profilecard2">
+                        <div class="pic">
+                            <img src="https://1.bp.blogspot.com/-26VWIeZ6VQg/X8rjrM31rFI/AAAAAAAABNw/BnkUvSI4JqIfhi2lWrNTmxn8RAY-wzPaQCLcBGAsYHQ/s320/220%2BComments%2BFor%2BGirls%2B-%2Bcute%2Band%2Bbeautiful%2Bgirl%2Bpic.webp" alt="">
+                        </div>
+                        <div>
+                            <p  class="username" >_niva_ptel_43</p>
+                            <p class="subtext" >follwer by user</p>
+                        </div>
+                        <button  class="actionbtn"  >follow</button>
+                    </div>
+
+                    <div class="profilecard2">
+                        <div class="pic">
+                            <img src="https://techtrickseo.com/wp-content/uploads/2017/09/Hidden-Face-Profile-DP-for-Girls-1.png" alt="">
+                        </div>
+                        <div>
+                            <p  class="username" >_sad_life_11</p>
+                            <p class="subtext" >follwer by user</p>
+                        </div>
+                        <button  class="actionbtn"  >follow</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #kkk {
+            width: 150px;
+            height: 150px;
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="kkk"></div>
+    <script>
+        var a = 0;
+        var d = setInterval(vaibhav, 100);
+        function vaibhav() {
+            if (a == 200) {
+                clearInterval(d);
+            }
+            else {
+                a = a + 10;
+                var b = document.getElementById("kkk");
+                b.style.width = a + 'px';
+            }
+        }
+
+    </script>
+</body>
+
+</html>

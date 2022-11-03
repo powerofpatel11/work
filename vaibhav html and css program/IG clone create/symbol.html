@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let id=Symbol("vaibhav");
+        // console.log(id);
+        // alert(id.description);
+
+        let age=Symbol("age");
+        let user ={
+            name:"vaibhav",
+            class:"BE"
+        };
+        user[age]=25;
+        user["gender"]="male";
+        console.log(user[age])
+        // not use for in loop symbol and not show for jashon file
+        console.log(JSON.stringify(user));
+
+    </script>
+</body>
+</html>

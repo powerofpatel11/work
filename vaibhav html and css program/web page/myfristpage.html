@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        header {
+            width: 100%;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: white;
+        }
+
+        .main {
+            width: 100vw;
+            height: 100vh;
+            background-image: url(https://images.pexels.com/photos/210186/pexels-photo-210186.jpeg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: rgba(0, 0, 0, 0.400);
+            background-blend-mode: overlay;
+        }
+
+        .logo h1 {
+
+            font-size: 39px;
+            margin-left: 60px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        nav {
+            width: 90%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        ul {
+
+            display: flex;
+            gap: 68px;
+            font-size: 20px;
+            letter-spacing: 1.2px;
+            list-style: none;
+        }
+
+        #iconbar {
+            font-size: 25px;
+            color: white;
+            margin-top: 22px;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        span {
+            color: rgba(255, 0, 0, 0.959);
+        }
+
+        .bh {
+            color: rgba(255, 0, 0, 0.8);
+        }
+
+        .btn1 button {
+            font-size: 18px;
+            letter-spacing: 2px;
+            padding: 4px 12px;
+            border: none;
+            background-color: rgba(245, 23, 164, 0.895);
+            border-radius: 100px;
+        }
+
+        .right {
+            display: flex;
+            flex-direction: column;
+            width: 90%;
+            justify-content: center;
+            align-items: flex-start;
+            margin-left: 8%;
+            height: calc(100vh - 200px);
+            gap: 40px;
+        }
+
+        .con {
+            margin-top: 5px;
+            padding: 3px;
+            display: flex;
+            border: 2px solid rgba(245, 23, 164, 0.895);
+            border-radius: 100px;
+
+            background-color: white;
+        }
+
+        .con input {
+
+            font-size: 16px;
+            padding: 8px 14px;
+            height: 40px;
+            border-radius: 100px;
+            border: none;
+            color: black;
+
+
+
+        }
+
+        .btn2 {
+
+            border: none;
+            padding: 8px 30px;
+            border-radius: 100px;
+            background-color: rgba(245, 23, 164, 0.895);
+            letter-spacing: 1.2px;
+            font-weight: 700;
+        }
+
+        .btn2:hover {
+            background-color: white;
+            color: rgba(245, 23, 164, 0.895);
+            border: 2px solid rgba(245, 23, 164, 0.895);
+
+        }
+
+
+
+        .name h1 {
+            font-size: 50px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+        }
+
+        .right h3 {
+            font-size: 22px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+
+        /* using media queries  */
+        @media screen and (min-width:1200px) {}
+
+        @media screen and (max-width:990px) {
+            .logo h1 {
+
+                margin-top: 20px;
+                margin-left: 70px;
+
+                text-align: center;
+            }
+
+
+
+            nav {
+                width: 90%;
+                /* margin: 20px auto; */
+                margin-top: 10px;
+
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+
+            ul {
+                margin-top: 150PX;
+                display: flex;
+                gap: 58px;
+                margin-left: -250px;
+                font-size: 20px;
+                letter-spacing: 1.2px;
+                list-style: none;
+
+            }
+
+            .btn1 button {
+                font-size: 18px;
+                letter-spacing: 2px;
+                margin-top: 150px;
+                margin-right: 70px;
+                padding: 4px 12px;
+                border: none;
+                background-color: rgba(245, 23, 164, 0.895);
+                border-radius: 100px;
+            }
+
+            .right {
+                display: flex;
+                flex-direction: column;
+                width: 90%;
+                justify-content: center;
+                align-items: flex-start;
+                margin-left: 9%;
+                height: calc(100vh - 200px);
+                gap: 40px;
+            }
+
+        }
+
+        @media screen and (max-width:800px) {
+            .logo {
+
+                margin-top: 20px;
+                margin-left: 30px;
+
+                text-align: center;
+            }
+
+            nav {
+                width: 85%;
+                /* margin: 20px auto; */
+                margin-top: 10px;
+
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+
+            ul {
+                margin-top: 150PX;
+                width: 100%;
+                display: flex;
+                gap: 25px;
+                margin-left: -180px;
+                font-size: 16px;
+                letter-spacing: 1.2px;
+                list-style: none;
+
+            }
+
+
+
+            .btn1 button {
+                font-size: 15px;
+                letter-spacing: 2px;
+                margin-top: 150px;
+                margin-left: 30px;
+
+                padding: 2px 3px;
+                border: none;
+                background-color: rgba(245, 23, 164, 0.895);
+                border-radius: 100px;
+            }
+
+            .right {
+                display: flex;
+                flex-direction: column;
+                width: 90%;
+                justify-content: center;
+                align-items: flex-start;
+                margin-left: 20%;
+                height: calc(100vh - 300px);
+                gap: 15px;
+
+            }
+
+            .name h1 {
+                /* width: 70%; */
+                font-size: 37px;
+            }
+
+            .name h3 {
+                font-size: 22px;
+            }
+
+            .btn2 {
+
+                border: none;
+                padding: 2px 10px;
+                border-radius: 100px;
+                background-color: rgba(245, 23, 164, 0.895);
+                letter-spacing: 1.2px;
+                font-weight: 400;
+            }
+
+            .con {
+                margin-top: 5px;
+                padding: 3px;
+                display: flex;
+                border: 2px solid rgba(245, 23, 164, 0.895);
+                border-radius: 100px;
+
+                background-color: white;
+            }
+
+            .con input {
+
+                font-size: 10px;
+                padding: 5px 10px;
+                height: 30px;
+                border-radius: 100px;
+                border: none;
+                color: black;
+
+
+
+            }
+        }
+
+        @media screen and (max-width:600px) {
+           .menulist ul {
+                opacity: 0;
+                visibility: hidden;
+               /* display: none; */
+            }
+
+
+            .btn1 {
+                opacity: 0;
+                visibility: hidden;
+            }
+
+            #iconbar {
+                opacity: 1;
+                visibility: visible;
+            }
+            
+
+            .menulist .responsive {
+                width: 100% !important;
+                height: 80vh !important;
+                background-color: black;
+                position: relative;
+                z-index: 1111111;
+                
+            }
+
+            .menulist .responsive ul {
+                opacity: 1;
+                visibility: visible;
+                /* display: block; */
+            }
+       .menulist .responsive ul li{
+        float: none;
+        display: block;
+        text-align: center;
+       }
+
+        }
+
+        @media screen and (max-width:480px) {
+            ul {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <nav>
+            <div class="logo">
+                <h1>Portfo<span>lio</span></h1>
+
+            </div>
+            <div class="menulist" id="menusamll">
+                <ul>
+                    <li>Home</li>
+                    <li>About Us</li>
+                    <li>Services</li>
+                    <li>Skills</li>
+                    <li>Contact Us</li>
+                </ul>
+            </div>
+            <a href="#" onclick="responsivemenu()" id="iconbar"><i class="fa-solid fa-bars"></i></a>
+
+
+            <div class="btn1">
+
+                <button>Subscribe</button>
+            </div>
+        </nav>
+
+
+        <div class="right">
+            <div class="name">
+                <h3>Hello, my name is</h3>
+                <br>
+                <h1>Vaibhav <span class="bh">Bhanderi</span></h1>
+                <br>
+                <h3>i'am a Back-End Developer</h3>
+            </div>
+            <div class="con">
+                <input type="email" name="" id="" placeholder="Enter Your Email">
+                <button class="btn2"> lets start </button>
+            </div>
+        </div>
+    </div>
+    <script>
+        function responsivemenu() {
+            var e = document.getElementById("menusamll");
+             if (e.className === "menulist") {
+                e.className += "responsive";
+            }
+            else {
+                e.className = "menulist";
+            }
+
+        }
+
+
+    </script>
+
+
+
+
+
+
+
+</body>
+
+</html>

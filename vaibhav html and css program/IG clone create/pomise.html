@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script >
+        //         let complete=true;
+        //         let prom =new Promise (function (resolve, reject){
+        //     if(complete){
+        //         resolve("I AM SUCCESSFUL.");
+        //     }
+        // else{
+        //     reject("I AM REJECTED");
+        // }
+
+
+        //         });
+
+        //     console.log(prom);  
+        // function prom(complete) {
+
+    
+        //     return new Promise(function (resolve, reject) {
+        //         if (complete) {
+        //             resolve("I AM SUCCESSFUL.");
+        //         }
+        //         else {
+        //             reject("I AM REJECTED");
+        //         }
+        //     });
+        // }
+        // // console.log(prom(true)); 
+        
+        // let onfulfilment =(result)=>{
+        //     console.log(result);
+        // }
+
+
+        // let onrejection =(error)=>{
+        //     console.log(error);
+        // }
+
+        // prom(true).then(onfulfilment);
+        // prom(false).catch(onrejection);
+
+
+
+
+
+//         function prom(complete) {
+
+    
+// return new Promise(function (resolve, reject) {
+//     console.log("fatching data , please wait...!!!")
+// setTimeout(() => {
+//     if (complete) {
+//         resolve("I AM SUCCESSFUL.");
+//     }
+//     else {
+//         reject("I AM REJECTED");
+//     }
+// }, 9000);
+// });
+// }
+// // console.log(prom(true)); 
+
+// let onfulfilment =(result)=>{
+// console.log(result);
+// }
+
+
+// let onrejection =(error)=>{
+// console.log(error);
+// }
+
+// prom(true).then(onfulfilment).catch(onrejection);
+
+
+
+
+
+
+
+// function prom(a,b) {
+
+    
+// return new Promise(function (resolve, reject) {
+//     console.log("fatching data , please wait...!!!")
+//     var c=a/b;
+// setTimeout(() => {
+//     if (a,b) {
+//         resolve(`Your answer : ${c}`);
+//     }
+//     else {
+//         reject("failed calculation");
+//     }
+// }, 9000);
+// });
+// }
+// // console.log(prom(true)); 
+
+// let onfulfilment =(result)=>{
+// console.log(result);
+// }
+
+
+// let onrejection =(error)=>{
+// console.log(error);
+// }
+
+// prom(5,0).then(onfulfilment).catch(onrejection);
+
+
+
+
+function prom() {
+
+    
+return new Promise(function (resolve, reject) {
+    console.log("fatching data , please wait...!!!")
+    
+setTimeout(() => {
+    $.get("https://jsonplaceholder.typicode.com/albums",(data)=>{
+        console.log(data);
+    }).fail(err =>{
+        reject("fail to load json");
+    });
+}, 9000);
+});
+}
+// console.log(prom(true)); 
+
+let onfulfilment =(data)=>{
+console.log(data);
+}
+
+
+let onrejection =(error)=>{
+console.log(error);
+}
+
+prom().then(onfulfilment).catch(onrejection);
+    </script>
+</body>
+
+</html>
+

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//         let p1= new Promise((resolve, reject) => {
+//             setTimeout(() => {
+//                 console.log(`the frist promise has resolved `);
+//             resolve(10);
+//             }, 1*1000);
+//         });
+
+//         let p2= new Promise((resolve, reject) => {
+//             setTimeout(() => {
+//                 console.log(`the second promise has resolved `);
+//             resolve(20);
+//             }, 1*3000);
+//         });
+//         let p3= new Promise((resolve, reject) => {
+//             setTimeout(() => {
+//                 console.log(`the third promise has resolved `);
+//             resolve(30);
+//             }, 1*6000);
+//         });
+
+//         var total=0;
+//         Promise.all([p1,p2,p3]).then((result)=>{
+//             for(var i in result){
+//                 total+=result[i];
+//             }
+//             console.log(`result : ${result}`);
+//             console.log(`total markes : ${total}`);
+//         }).catch((error)=>{
+//   console.log(`error : ${error}`);
+//         });
+
+
+
+
+let promisecall=function(returndata, message){
+    return function(resolve,reject){
+         setTimeout(() => {
+            console.log(`the ${message} promise has resolved`);
+            resolve(returndata);
+         }, returndata *100);
+    }
+}
+let p1=new Promise(promisecall(10,"frist"));
+let p2=new Promise(promisecall(20,"second"));
+let p3=new Promise(promisecall(30,"third"));
+let p4=new Promise(promisecall(40,"four"));
+
+var total=0;
+        Promise.all([p1,p2,p3,p4]).then((result)=>{
+            for(var i in result){
+                total+=result[i];
+            }
+            console.log(`result : ${result}`);
+            console.log(`total markes : ${total}`);
+        }).catch((error)=>{
+  console.log(`error : ${error}`);
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>

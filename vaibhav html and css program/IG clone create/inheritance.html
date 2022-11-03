@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // class employee{
+        //     constructor(name){
+        //         this.empname=name;
+        //         document.write("contructor : employee"+"<br>");
+        //     }
+        //     info(){
+        //         document.write("contructor name "+this.empname + "<br>")
+        //     }
+        // }
+        // class manager extends employee{
+        // info(){
+        //     super.info();
+        //     document.write("manager name : " + this.empname +"<br>");
+        // }
+        // }
+        // let a=new manager ("vaibhav");
+        // a.info();
+  
+class employee{
+    constructor(name , age, salary){
+        this.empname=name;
+        this.empage=age;
+        this.empsalary=salary;
+    }
+    info(){
+        document.write( `<h3> Employee Details </h3>
+            name :${this.empname +"<br>"}
+            name :${this.empage+"<br>"}
+            name :${this.empsalary+"<br>"}
+            `);
+    }
+
+}
+   class manager extends employee{
+   info(){ 
+    super.info();
+    let ta=1000;
+    let pa=100;
+    let totalsalary=this.empsalary+ta+pa;
+    document.write( `<h3> manager class</h3>
+        name : ${this.empname} <br>
+        age : ${this.empage} <br>
+        salary : ${totalsalary} <br>`)
+
+   }
+   }     
+   class test extends manager{
+    
+
+
+   }
+
+ let a=new test("vaibhav",25,20000);
+ let b=new test("vaibhav",2,2000);
+
+a.info();
+b.info();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

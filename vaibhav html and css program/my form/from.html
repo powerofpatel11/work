@@ -1,0 +1,99 @@
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Satisfy&display=swap" rel="stylesheet">
+
+    <style>
+        .right{
+            margin-top: 100px;
+            
+        }
+        table{
+            font-size: 25px;
+            color: aliceblue;
+        }
+        body{
+            background-color:darkblue;
+        }
+        .last{
+            /* width: 1500px; */
+            /* margin-right: 1000px; */
+            
+        }
+
+        h1{
+            font-family: 'Lobster', cursive;
+           color:aliceblue;
+            font-size: 50px;
+
+        }
+
+        
+        
+    </style>
+    
+</head>
+<body>
+    <form action=""> 
+    <h1 align="center">Product Registration Form</h1>
+    <table align="center" cellpadding="6px" width="90%" >
+
+        <tr>
+            <div class="right">
+            <td align="right" ><label for="name" >Product Name</label></td>
+            <td><input type="text" required id="name"></td>
+        </div>
+        <div class="left">
+            <td align="right" ><label for="type" > Product type </label></td>
+        
+            
+            <td >
+                <select name="" id="type" >  
+                    <option value="">select</option>
+                <option value="">Digital</option>
+                <option value="">Physical</option>
+            </select></td>
+        </div>
+            </tr>
+            <tr>
+                <div class="right">
+            <td align="right"> <label for="Quality"></label> Quality</td>
+            <td><input type="text" required id="Quality" ></td>
+        </div>
+
+        <div class="left">
+            <td align="right"><label for="price">Price</label></td>
+            <td><input type="number" name="" id="price"></td>
+        </div>
+        </tr>
+        <tr>
+            <div class="right">
+            <td align="right"><label for="des">Description</label></td>
+            <td><input type="text" id="des"></td>
+        </div>
+        <div class="left">
+            <td align="right"><label for="image">Image Upload</label></td>
+            <td><input type="file" name="" id="image"></td>
+        </div>
+        </tr>
+        <tr>
+            <div class="right">
+            <!-- <td align="right"><label for="mul">Multipal Image Upload</label></td>
+            <td><input type="file" name="" id=""></td> -->
+        </div>
+        </tr>
+    </table>
+    <div class="last">
+    <table cellpadding="6px" align="center" >
+        <tr>
+            <td  align="center" ><h1><input type="submit" value="submit"></h1></td>
+            <td align="center"  > <h1><button >show</button></h1></td>
+        </tr>
+    </table>
+</div>
+</form>
+</body>
+</html>
