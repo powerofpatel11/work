@@ -1,0 +1,134 @@
+ I1 Get First_Name from employee table using alias name “Employee Name”.
+-->SELECT Frist_name AS EmployeeName FROM empoloyee1 ;
+
+I2 Get FIRST_NAME, Joining year, Joining Month and Joining Date from
+   employee table
+-->SELECT Frist_name , Joining_date  FROM empoloyee1;
+
+I3 Get all employee details from the employee table order by First_Name 
+   Ascending and Salary descending.
+-->SELECT Frist_name FROM empoloyee1 ORDER BY Frist_name; SELECT Salary FROM empoloyee1 ORDER BY Salary DESC;
+
+I4 Get employee details from employee table whose first name contains ‘o’.
+--> SELECT frist_name FROM empoloyee1 WHERE Frist_name LIKE '_o%';
+
+I5 Get employee details from employee table whose joining month is 
+   “January”.
+-->SELECT * FROM empoloyee1 WHERE joining_date="2013-01-01 12:00:00";
+
+
+I6 Get department, total salary with respect to a department from employee
+   table order by total salary descending.
+-->SELECT department , Salary  FROM empoloyee1  ORDER BY Salary DESC; 
+
+I7 Get department wise maximum salary from employee table order by salary
+   ascending
+-->SELECT department , Salary FROM empoloyee1 GROUP BY department  ORDER BY Salary DESC; 
+
+
+I8 Select first_name, incentive amount from employee and incentives table 
+   for those employees who have incentives and incentive amount greaterthan 
+   3000.
+-->SELECT empoloyee1.`Frist_name` , incentive.`Incentive_amount` FROM empoloyee1  INNER  JOIN incentive ON Empoloyee_id=Empoloyee_ref_id WHERE Incentive_amount>3000;
+
+I9 Select 2nd Highest salary from employee table.
+-->SELECT MAX(Salary)AS secondmaxsalary FROM empoloyee1 WHERE salary  <(SELECT MAX(Salary) FROM empoloyee1);
+		
+
+I10 Select first_name, incentive amount from employee and incentives table for all employees who got incentives using left join.
+--> SELECT empoloyee1.`Frist_name` , incentive.`Incentive_amount` FROM empoloyee1 LEFT JOIN incentive ON Empoloyee_id=Empoloyee_ref_id ;
+
+I11 Create View OF Employee table in which store first name ,last name and 
+    salary only.
+-->  CREATE
+     VIEW `empoloyee`.`Empoloyee` 
+    AS
+    (SELECT Frist_name , Last_name , Salary FROM empoloyee1 );
+
+I12 Create Procedure to find out department wise highest salary.
+-->DELIMITER $$
+
+CREATE
+    /*[DEFINER = { user | CURRENT_USER }]*/
+    PROCEDURE `empoloyee`.`highestsalary`()
+    
+    BEGIN
+  SELECT Department, MAX(Salary) FROM empoloyee1 GROUP BY department;
+    END$$
+
+DELIMITER ;
+
+calling for Query --->CALL highestsalary ();
+
+I13 Create After Insert trigger on Employee table which insert records in view
+    table.
+-->DELIMITER $$
+
+CREATE
+    
+    TRIGGER `empoloyee`.`Vaibhav` AFTER DELETE
+    ON `empoloyee`.`empoloyee1`
+    FOR EACH ROW BEGIN
+INSERT INTO backuptable VALUES
+(old.Empoloyee_id, old.Frist_name, old.Last_name, old.Salary, old.Joining_date, old.Department);	
+	
+    END$$
+
+DELIMITER ;
+
+--> CREATE TABLE Backuptable 
+   (Empoloyee_id INT, 
+  Frist_name VARCHAR(50),
+  Last_name VARCHAR(50), 
+  Salary INT, 
+  Joining_date DATETIME,
+  Department VARCHAR(50));
+
+
+
+
+
+------------------------------------------------------------------------SECOND TABLE-----------------------------------------------------------------------------------------------
+
+A1 All orders for more than $1000.
+-->SELECT *FROM Order1 WHERE amt>1000;
+
+A2 Names and cities of all salespeople in London with commission above 0.10.
+-->SELECT SNAME,CITY, COMM FROM salseperson WHERE CITY='London' AND COMM>0.10 ; 
+
+A8 All salespeople either in Barcelona or in London.
+-->SELECT *FROM salseperson WHERE CITY='BARCELONA' OR CITY='LONDON' ;
+-->SELECT*FROM salseperson WHERE CITY IN ('BARCELONA','LONDON');
+
+A9 All salespeople with commission between 0.10 and 0.12. (Boundary values
+   shouldbe excluded).
+-->SELECT*FROM salseperson WHERE COMM BETWEEN 0.10 AND 0.12 ;
+
+A10 All customers excluding those with rating <= 100 unless they are located in
+    Rome..
+--> SELECT *FROM CUSTOMER WHERE RATING>=100 AND CITY NOT IN ('ROE');
+
+A11 All orders except those with 0 or NULL value in amt field.
+-->SELECT*FROM ORDER1 WHERE AMT<>0 OR AMT<>NULL;
+
+A12 Count the number of salespeople currently listing orders in the order table.
+-->SELECT  COUNT( DISTINCT(SNO)) FROM ORDER1;
+   SELECT SNo,COUNT(SNo) FROM ORDER1 GROUP BY SNo ;
+
+A13 Largest order taken by each salesperson, datewise.
+-->SELECT salseperson.`SNAME`, MAX(ORDER1.`AMT`),ORDER1.`ODE` FROM salseperson INNER JOIN ORDER1 ON salseperson.`SNo`= ORDER1.`SNo` GROUP BY ODE ORDER BY ODE;
+
+A14 Largest order taken by each salesperson with order value more than $3000.
+   (ie same city).
+-->SELECT salseperson.`SNAME`, ORDER1.`AMT`  FROM salseperson INNER JOIN ORDER1 ON salseperson.`SNo`=ORDER1.`SNo`  WHERE AMT>3000 GROUP BY SNAME;
+	
+
+
+
+
+
+
+
+
+
+
